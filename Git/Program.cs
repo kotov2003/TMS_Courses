@@ -8,6 +8,7 @@
 
         Task1();
         Task2();
+        Task3();
     }
 
     private static void Task1()
@@ -77,5 +78,55 @@
         else
             Console.WriteLine($"{new String('-', 55)}\nResult: the entered number does not belong to any of the number ranges: [0 - 14] [15 - 35] [36 - 50][50 - 100]\n{new String('-', 55)}\n");
 
+    }
+
+    private static void Task3()
+    {
+        Console.WriteLine($"\n{new String('=', 55)}\nWelcome to Task3!\n{new String('=', 55)}");
+        Console.WriteLine("Enter any word from the \"Weather\" topic: ");
+
+        string? searchWord = Console.ReadLine();
+        string searchResult = default;
+        bool isNothingFound = default;
+
+        switch (searchWord)
+        {
+            case "дождь":
+                searchResult = "rain";
+                break;
+            case "облачно":
+                searchResult = "cloudy";
+                break;
+            case "температура":
+                searchResult = "temperature";
+                break;
+            case "давление":
+                searchResult = "pressure";
+                break;
+            case "дождик":
+                searchResult = "shower";
+                break;
+            case "влажность":
+                searchResult = "humidity";
+                break;
+            case "холодно":
+                searchResult = "cold";
+                break;
+            case "жара":
+                searchResult = "heat";
+                break;
+            case "ветер":
+                searchResult = "wind";
+                break;
+            case "туман":
+                searchResult = "fog";
+                break;
+            default:
+                Console.WriteLine($"{new String('-', 55)}\nResult: no translation for this word\n{new String('-', 55)}\n");
+                isNothingFound = true;
+                break;
+        }
+
+        if (!isNothingFound) Console.WriteLine($"{new String('-', 55)}\nResult: {searchResult}\n{new String('-', 55)}\n");
     }
 }
