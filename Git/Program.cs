@@ -157,6 +157,6 @@
         {
             result = "odd";
         }
-        Console.WriteLine($"Method 2:The number is {result}");
+        Console.WriteLine($"Method 2: The number is {result}");
     }
 }
