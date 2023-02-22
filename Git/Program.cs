@@ -9,6 +9,7 @@
         Task1();
         Task2();
         Task3();
+        Task4();
     }
 
     private static void Task1()
@@ -128,5 +129,34 @@
         }
 
         if (!isNothingFound) Console.WriteLine($"{new String('-', 55)}\nResult: {searchResult}\n{new String('-', 55)}\n");
+    }
+
+    private static void Task4()
+    {
+        Console.WriteLine($"\n{new String('=', 55)}\nWelcome to Task4!\n{new String('=', 55)}");
+        Console.WriteLine("Enter any number for even-odd testing:");
+
+        int numberTocheck = Convert.ToInt32(Console.ReadLine());
+        string result;
+
+        if ((numberTocheck % 2) == 0)
+        {
+            result = "even";
+        }
+        else
+        {
+            result = "odd";
+        }
+        Console.WriteLine($"Method 1: The number is {result}");
+
+        if ((numberTocheck & 1) == 0)
+        {
+            result = "even";
+        }
+        else
+        {
+            result = "odd";
+        }
+        Console.WriteLine($"Method 2:The number is {result}");
     }
 }
