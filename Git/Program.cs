@@ -7,11 +7,12 @@
         Console.WriteLine($"Hello {name}!\n");
 
         Task1();
+        Task2();
     }
 
     private static void Task1()
     {
-        Console.WriteLine($"Welcome to СonsoleСalculator!\n{new String('=', 25)}");
+        Console.WriteLine($"\n{new String('=', 55)}\nWelcome to Task1!\n{new String('=', 55)}");
 
         Console.WriteLine("Enter the first operand: ");
         string? firstOperand = Console.ReadLine();
@@ -41,7 +42,7 @@
             case "/":
                 if (operand2 == 0)
                 {
-                    Console.WriteLine($"{new String('-', 25)}\nInvalid input data: division by zero is not allowed.");
+                    Console.WriteLine($"{new String('-', 55)}\nInvalid input data: division by zero is not allowed.\n{new String('-', 55)}\n");
                     IsInputDataError = true;
                     break;
                 }
@@ -55,6 +56,26 @@
                 break;
         }
 
-        if (!IsInputDataError) Console.WriteLine($"{new String('-', 25)}\nResult: {result}");
+        if (!IsInputDataError) Console.WriteLine($"{new String('-', 55)}\nResult: {result}\n{new String('-', 55)}\n");
+    }
+
+    private static void Task2()
+    {
+        Console.WriteLine($"\n{new String('=', 55)}\nWelcome to Task2!\n{new String('=', 55)}");
+
+        Console.WriteLine("Enter any numnber between 0 and 100: ");
+        int guessNumber = Convert.ToInt32(Console.ReadLine());
+
+        if (51 <= guessNumber && guessNumber <= 100)
+            Console.WriteLine($"{new String('-', 55)}\nResult: the entered number belongs to [51 - 100]\n{new String('-', 55)}\n");
+        else if (36 <= guessNumber && guessNumber <= 50)
+            Console.WriteLine($"{new String('-', 55)}\nResult: the entered number belongs to [36 - 50]\n{new String('-', 55)}\n");
+        else if (15 <= guessNumber && guessNumber <= 35)
+            Console.WriteLine($"{new String('-', 55)}\nResult: the entered number belongs to [15 - 35]\n{new String('-', 55)}\n");
+        else if (0 <= guessNumber && guessNumber <= 14)
+            Console.WriteLine($"{new String('-', 55)}\nResult: the entered number belongs to [0 - 14]\n{new String('-', 55)}\n");
+        else
+            Console.WriteLine($"{new String('-', 55)}\nResult: the entered number does not belong to any of the number ranges: [0 - 14] [15 - 35] [36 - 50][50 - 100]\n{new String('-', 55)}\n");
+
     }
 }
