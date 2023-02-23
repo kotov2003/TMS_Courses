@@ -12,6 +12,7 @@
         Task4();
         Task5();
         Task6();
+        Task7();
     }
 
     private static void Task1()
@@ -267,5 +268,37 @@
         }
 
         Console.WriteLine($"Result: \nFirst Number:{op1}\nSecond Number:{op2}\nThird Number:{op3}\nFourth Number:{op4}\n");
+    }
+
+    private static void Task7()
+    {
+        Console.WriteLine($"\n{new string('=', 55)}\nWelcome to Task6!\n{new string('=', 55)}");
+
+        Console.WriteLine("Enter vertical coordinate #1 (number between 1 and 8): ");
+        int firstVertValue = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter horizontal coordinate #1 (number between 1 and 8): ");
+        int firstHorValue = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter vertical coordinate #2 (number between 1 and 8): ");
+        int secondVertValue = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter horizontal coordinate #2 (number between 1 and 8): ");
+        int secondHorValue = Convert.ToInt32(Console.ReadLine());
+
+
+        bool isFirstBlack = (firstVertValue % 2 == 0 && firstHorValue % 2 == 0)|| (firstVertValue % 2 != 0 && firstHorValue % 2 != 0);
+        bool isSecondBlack = (secondVertValue % 2 == 0 && secondHorValue % 2 == 0) || (secondVertValue % 2 != 0 && secondHorValue % 2 != 0);
+
+        if (isFirstBlack == isSecondBlack)
+        {
+            Console.WriteLine($"Result: Fields have the same colour");
+            Console.WriteLine($"Result: The horse does not threaten the field");
+        }
+        else
+        {
+            Console.WriteLine($"Result: Fields have different colours");
+            Console.WriteLine($"Result: The horse threaten the field");
+        }
     }
 }
