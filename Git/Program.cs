@@ -10,6 +10,8 @@
         Task2();
         Task3();
         Task4();
+        Task5();
+        Task6();
     }
 
     private static void Task1()
@@ -170,5 +172,100 @@
             result = "odd";
         }
         Console.WriteLine($"Method 2: The number is {result}");
+    }
+
+    private static void Task5()
+    {
+        Console.WriteLine($"\n{new string('=', 55)}\nWelcome to Task5!\n{new string('=', 55)}");
+
+        Console.WriteLine("Enter the first triangle: ");
+        string? firstSideValue = Console.ReadLine();
+
+        Console.WriteLine("Enter the second triangle: ");
+        string? secondSideValue = Console.ReadLine();
+
+        Console.WriteLine("Enter the third triangle: ");
+        string? thirdSideValue = Console.ReadLine();
+
+        var operand1 = Convert.ToDouble(firstSideValue);
+        var operand2 = Convert.ToDouble(secondSideValue);
+        var operand3 = Convert.ToDouble(thirdSideValue);
+
+
+        string resultExisting;
+        string? resultIsAcute = default;
+        double biggestNumber;
+
+        biggestNumber = operand2 > operand1 ? operand2 : operand1;
+        biggestNumber = biggestNumber > operand3 ? biggestNumber : operand3;
+        //biggestNumber = Math.Max(operand1, Math.Max(operand2, operand3));
+        //biggestNumber = new[] { operand1, operand2, operand3 }.Max();
+
+        var isTriangleExist = operand1 + operand2 > operand3 && operand1 + operand3 > operand2 && operand2 + operand3 > operand1;
+        var isItAcuteTriangle = Math.Pow(biggestNumber, 2) < (Math.Pow(operand2, 2) + Math.Pow(operand3, 2));
+
+        if (isTriangleExist)
+        {
+            resultExisting = "triangle exists";
+            if (isItAcuteTriangle)
+            {
+                resultIsAcute = "triangle is acute";
+            }
+            else
+            {
+                resultIsAcute = "triangle is not acute";
+            }
+        }
+        else
+        {
+            resultExisting = "triangle does not exists";
+        }
+
+        Console.WriteLine($"Result: {resultExisting}");
+        if (isTriangleExist)
+        {
+            Console.WriteLine($"Result: {resultIsAcute}");
+        }
+    }
+
+    private static void Task6()
+    {
+        Console.WriteLine($"\n{new string('=', 55)}\nWelcome to Task6!\n{new string('=', 55)}");
+
+        Console.WriteLine("Enter the first number: ");
+        string? firstSideValue = Console.ReadLine();
+
+        Console.WriteLine("Enter the second number: ");
+        string? secondSideValue = Console.ReadLine();
+
+        Console.WriteLine("Enter the third number: ");
+        string? thirdSideValue = Console.ReadLine();
+
+        Console.WriteLine("Enter the fourth number: ");
+        string? foгrthSideValue = Console.ReadLine();
+
+        var op1 = Convert.ToDouble(firstSideValue);
+        var op2 = Convert.ToDouble(secondSideValue);
+        var op3 = Convert.ToDouble(thirdSideValue);
+        var op4 = Convert.ToDouble(foгrthSideValue);
+        var isFirstConditionTrue = (op1 <= op2) && (op2 <= op3) && (op3 <= op4);
+        var isSecondConditionTrue = (op1 > op2) && (op2 > op3) && (op3 > op4);
+
+        if (isFirstConditionTrue)
+        {
+            op1 = op2 = op3 = op4;
+        }
+        else if (isSecondConditionTrue)
+        {
+        }
+        else
+        {
+            op1 = Math.Pow(op1, 2);
+            op2 = Math.Pow(op2, 2);
+            op3 = Math.Pow(op3, 2);
+            op4 = Math.Pow(op4, 2);
+        }
+
+        Console.WriteLine($"Result: \nFirst Number:{op1}\nSecond Number:{op2}\nThird Number:{op3}\nFourth Number:{op4}\n");
     }
 }
