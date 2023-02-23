@@ -298,7 +298,7 @@
         else
         {
             Console.WriteLine($"Result: Fields have different colours");
-            Console.WriteLine($"Result: The horse threaten the field");
+            Console.WriteLine($"Result: The horse threaten the field!");
         }
     }
 }
