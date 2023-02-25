@@ -6,17 +6,18 @@ public class Program
 {
     static void Main(string[] args)
     {
-        HomeTask1.Welcome();
+        //HomeTask1.Welcome();
 
-        HomeTask2.Calculator();
-        HomeTask2.BelongToRange();
-        HomeTask2.Dictionary();
-        HomeTask2.IsEvenOrOdd();
-        HomeTask2.Triangle();
-        HomeTask2.ConditionOperations();
-        HomeTask2.Сhess();
+        //HomeTask2.Calculator();
+        //HomeTask2.BelongToRange();
+        //HomeTask2.Dictionary();
+        //HomeTask2.IsEvenOrOdd();
+        //HomeTask2.Triangle();
+        //HomeTask2.ConditionOperations();
+        //HomeTask2.Сhess();
 
-        HomeTask3.Task_IsNumberInTheRange();
-        HomeTask3.Task_RemoveFromTheRange();
+        //HomeTask3.Task_IsNumberInTheRange();
+        //HomeTask3.Task_RemoveFromTheRange();
+        HomeTask3.Task_RandomElementsArray();
     }
 }

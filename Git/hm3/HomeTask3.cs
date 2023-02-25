@@ -73,6 +73,27 @@ namespace Git.hm3
             }
         }
 
+        static public void Task_RandomElementsArray()
+        {
+            Random random = new Random();
 
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_RandomElementsArray!\'\n{new string('=', 55)}");
+            Console.WriteLine("Enter the length of the array: ");
+            int length = int.Parse(Console.ReadLine());
+
+            int[] intArray = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                intArray[i] = (int)random.NextInt64(-100, 100);
+            }
+
+            Console.WriteLine($"\nArray: \n");
+            foreach (var item in intArray)
+            {
+                Console.WriteLine($"{item}\n");
+            }
+            Console.WriteLine($"{new string('-', 55)}\nResult: MAX = {intArray.Max()}, MIN = {intArray.Min()}, AVG = {intArray.Average()};\n{new string('-', 55)}\n");
+        }
     }
 }
