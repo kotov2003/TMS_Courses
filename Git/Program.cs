@@ -17,5 +17,6 @@ public class Program
         HomeTask2.Сhess();
 
         HomeTask3.Task_IsNumberInTheRange();
+        HomeTask3.Task_RemoveFromTheRange();
     }
 }
