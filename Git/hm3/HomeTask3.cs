@@ -95,5 +95,38 @@ namespace Git.hm3
             }
             Console.WriteLine($"{new string('-', 55)}\nResult: MAX = {intArray.Max()}, MIN = {intArray.Min()}, AVG = {intArray.Average()};\n{new string('-', 55)}\n");
         }
+
+        static public void Task_CompareAVG2Arrays()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_CompareAVG2Arrays!\'\n{new string('=', 55)}");
+
+            int[] intArray_1 = new int[5] { 10, 20, 30, 40, 50 };
+            int[] intArray_2 = new int[5] { 1, 2, 3, 4, 5 };
+            int count_1 = 0;
+            int count_2 = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                count_1 += intArray_1[i];
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                count_2 += intArray_2[i];
+            }
+
+            switch (count_1 - count_2)
+            {
+                case 0:
+                    Console.WriteLine($"Result: AVGs are equal \n{new string('-', 55)}\n");
+                    break;
+                case < 0:
+                    Console.WriteLine($"Result: Second Array AVG is bigger\n{new string('-', 55)}\n");
+                    break;
+                default:
+                    Console.WriteLine($"Result: First Array AVG is bigger\n{new string('-', 55)}\n");
+                    break;
+            }
+        }
     }
 }
