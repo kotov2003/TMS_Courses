@@ -128,5 +128,52 @@ namespace Git.hm3
                     break;
             }
         }
+
+        static public void Task_Additional_4()
+        {
+            int length = default;
+            int count = 0, numberOfFOundElements = 0;
+            Random random = new Random();
+
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_Additional_4!\'\n{new string('=', 55)}");
+            do
+            {
+                Console.WriteLine("Enter the length of the array: ");
+                length = int.Parse(Console.ReadLine());
+                if (length > 5 && length <= 10)
+                {
+                    break;
+                }
+                Console.WriteLine("Warning: the length of the array should be more than five and less or equal to 10.");
+            } while (true);
+
+            int[] intArray = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                intArray[i] = (int)random.NextInt64(-100, 100);
+                Console.WriteLine($"{intArray[i]}");
+            }
+
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                if ((intArray[i] % 2) == 0)
+                {
+                    numberOfFOundElements += 1;
+                }
+            }
+
+            Console.WriteLine($"\nArray: \n");
+            int[] newArray = new int[numberOfFOundElements];
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                if ((intArray[i] % 2) == 0)
+                {
+                    newArray[count] = intArray[i];
+                    Console.WriteLine($"{newArray[count]}");
+                    count++;
+                }
+            }
+        }
     }
 }
