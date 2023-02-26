@@ -146,9 +146,9 @@ namespace Git.hm3
                 }
                 Console.WriteLine("Warning: the length of the array should be more than five and less or equal to 10.");
             } while (true);
+            Console.WriteLine("");
 
             int[] intArray = new int[length];
-
             for (int i = 0; i < length; i++)
             {
                 intArray[i] = (int)random.NextInt64(-100, 100);
@@ -163,7 +163,7 @@ namespace Git.hm3
                 }
             }
 
-            Console.WriteLine($"\nArray: \n");
+            Console.WriteLine($"\n\nRESULT: ");
             int[] newArray = new int[numberOfFOundElements];
             for (int i = 0; i < intArray.Length; i++)
             {
@@ -173,6 +173,33 @@ namespace Git.hm3
                     Console.WriteLine($"{newArray[count]}");
                     count++;
                 }
+            }
+        }
+
+        static public void Task_Additional_5()
+        {
+            int count = 0, numberOfFOundElements = 0;
+            Random random = new Random();
+
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_Additional_5!\'\n{new string('=', 55)}");
+            Console.WriteLine("Enter the length of the array: ");
+            int length = int.Parse(Console.ReadLine());       
+
+            int[] intArray = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                intArray[i] = (int)random.NextInt64(-100, 100);
+                Console.Write($"{intArray[i]} ");
+            }
+
+            Console.WriteLine($"\n\nRESULT: ");
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                if ((i % 2) != 0)
+                {
+                    intArray[i] = 0;
+                }
+                Console.Write($"{intArray[i]} ");
             }
         }
     }
