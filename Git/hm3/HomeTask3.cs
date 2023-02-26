@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -216,6 +217,36 @@ namespace Git.hm3
             for (int i = 0; i < words.Length; i++)
             {
                 Console.Write($"{words[i]} ");
+            }
+        }
+
+        static public void Task_Additional_7()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_Additional_7!\'\n{new string('=', 55)}");
+            Console.WriteLine("Enter numbers separated by commas: ");
+            string[] numbers = Console.ReadLine().Split(new char[] { ',' });
+
+            int[] numberArray = new int[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numberArray[i] = int.Parse(numbers[i]);
+            }
+
+            for (int i = 0; i < numberArray.Length; i++)
+                for (int j = 0; j < numberArray.Length - i - 1; j++)
+                {
+                    if (numberArray[j] > numberArray[j + 1])
+                    {
+                        int temp = numberArray[j];
+                        numberArray[j] = numberArray[j + 1];
+                        numberArray[j + 1] = temp;
+                    }
+                }
+
+            Console.WriteLine("\nRESULT: \n");
+            foreach (int value in numberArray)
+            {
+                Console.Write($"{value} ");
             }
         }
     }
