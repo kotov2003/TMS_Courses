@@ -249,5 +249,48 @@ namespace Git.hm3
                 Console.Write($"{value} ");
             }
         }
+
+        static public void Task_Additional_8()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_Additional_8!\'\n{new string('=', 55)}");
+
+            int[,] matrixA = { { 1, 0, 0, 0 },
+                               { 0, 1, 0, 0 },
+                               { 0, 0, 0, 0 } };
+
+            int[,] matrixB = { { 1, 2, 3 },
+                               { 1, 1, 1 },
+                               { 0, 0, 0 },
+                               { 2, 1, 0 }};
+
+            var RowsNumberInA = matrixA.GetUpperBound(0) + 1;
+            var ColumnsNumberInA = matrixA.GetUpperBound(1) + 1;
+            var ColumnsNumberInB = matrixB.GetUpperBound(1) + 1;
+            var matrixC = new int[RowsNumberInA, ColumnsNumberInB];
+
+            for (var i = 0; i < RowsNumberInA; i++)
+            {
+                for (var j = 0; j < ColumnsNumberInB; j++)
+                {
+                    matrixC[i, j] = 0;
+
+                    for (var k = 0; k < ColumnsNumberInA; k++)
+                    {
+                        matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
+                    }
+                }
+            }
+
+            Console.WriteLine("\nRESULT: \n");
+            for (var i = 0; i < RowsNumberInA; i++)
+            {
+                for (var j = 0; j < ColumnsNumberInB; j++)
+                {
+                    Console.Write(matrixC[i, j]);
+                }
+                Console.WriteLine();
+            }
+        }
+
     }
 }
