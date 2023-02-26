@@ -22,6 +22,6 @@ public class Program
         HomeTask3.Task_CompareAVG2Arrays();
         HomeTask3.Task_Additional_4();
         HomeTask3.Task_Additional_5();
-
+        HomeTask3.Task_Additional_6();
     }
 }

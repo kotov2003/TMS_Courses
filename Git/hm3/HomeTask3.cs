@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -183,7 +184,7 @@ namespace Git.hm3
 
             Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_Additional_5!\'\n{new string('=', 55)}");
             Console.WriteLine("Enter the length of the array: ");
-            int length = int.Parse(Console.ReadLine());       
+            int length = int.Parse(Console.ReadLine());
 
             int[] intArray = new int[length];
             for (int i = 0; i < length; i++)
@@ -200,6 +201,21 @@ namespace Git.hm3
                     intArray[i] = 0;
                 }
                 Console.Write($"{intArray[i]} ");
+            }
+        }
+
+        static public void Task_Additional_6()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_Additional_6!\'\n{new string('=', 55)}");
+            Console.WriteLine("Enter arbitrary people's names separated by commas: ");
+            string[] words = Console.ReadLine().Split(new char[] { ',' });
+
+            Array.Sort(words, StringComparer.InvariantCulture);
+
+            Console.WriteLine($"\n\nRESULT: ");
+            for (int i = 0; i < words.Length; i++)
+            {
+                Console.Write($"{words[i]} ");
             }
         }
     }
