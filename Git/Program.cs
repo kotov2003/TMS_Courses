@@ -1,5 +1,6 @@
 ﻿using Git.hm1;
 using Git.hm2;
+using Git.hm3;
 
 public class Program
 {
@@ -14,5 +15,15 @@ public class Program
         HomeTask2.Triangle();
         HomeTask2.ConditionOperations();
         HomeTask2.Сhess();
+
+        HomeTask3.Task_IsNumberInTheRange();
+        HomeTask3.Task_RemoveFromTheRange();
+        HomeTask3.Task_RandomElementsArray();
+        HomeTask3.Task_CompareAVG2Arrays();
+        HomeTask3.Task_Additional_4();
+        HomeTask3.Task_Additional_5();
+        HomeTask3.Task_Additional_6();
+        HomeTask3.Task_Additional_7();
+        HomeTask3.Task_Additional_8();
     }
 }
