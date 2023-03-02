@@ -45,12 +45,12 @@ namespace Git.hm4
         static public void Task_DocumentNumber_3()
         {
             string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
-            var result0 = Regex.Replace(documentNumber, @"[0-9]{4}-", @"/");
-            var result1 = Regex.Replace(result0, @"[0-9]", @"/");
-            var result2 = Regex.Replace(result1, @"[-]", "");
+            var result_1 = Regex.Replace(documentNumber, @"[0-9]{4}-", @"/");
+            var result_2 = Regex.Replace(result_1, @"[0-9]", @"/");
+            var result = Regex.Replace(result_2, @"[-]", "");
 
             Console.WriteLine($"\nRESULT:");
-            Console.WriteLine($"{result2}");
+            Console.WriteLine($"{result}".ToLower());
             Console.WriteLine($"{new string('=', 55)}\n");
 
         }
