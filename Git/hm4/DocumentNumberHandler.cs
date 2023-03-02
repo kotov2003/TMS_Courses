@@ -52,7 +52,24 @@ namespace Git.hm4
             Console.WriteLine($"\nRESULT:");
             Console.WriteLine($"{result}".ToLower());
             Console.WriteLine($"{new string('=', 55)}\n");
+        }
 
+        static public void Task_DocumentNumber_4()
+        {
+            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+
+            var sb = new StringBuilder(documentNumber);
+            sb.Remove(0,5);
+            sb.Remove(3, 6);
+            sb.Remove(6, 2);
+            sb.Remove(7, 1);
+            sb.Insert(3, "/");
+            sb.Insert(7, "/");
+            sb.Insert(9, "/");
+
+            Console.WriteLine($"\nRESULT:");
+            Console.WriteLine($"{sb}".ToUpper());
+            Console.WriteLine($"{new string('=', 55)}\n");
         }
     }
 }
