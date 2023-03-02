@@ -27,11 +27,12 @@ public class Program
         //HomeTask3.Task_Additional_7();
         //HomeTask3.Task_Additional_8();
 
-        HomeTask4.Task_IsNumberInTheRange();
-        HomeTask4.Task_WelcomуToTheTMSlesons();
-        HomeTask4.Task_StringDevidedToTwoParts();
-        HomeTask4.Task_BadGoodDay();
+        //HomeTask4.Task_IsNumberInTheRange();
+        //HomeTask4.Task_WelcomуToTheTMSlesons();
+        //HomeTask4.Task_StringDevidedToTwoParts();
+        //HomeTask4.Task_BadGoodDay();
         DocumentNumberHandler.Task_DocumentNumber_1();
         DocumentNumberHandler.Task_DocumentNumber_2();
+        DocumentNumberHandler.Task_DocumentNumber_3();
     }
 }
