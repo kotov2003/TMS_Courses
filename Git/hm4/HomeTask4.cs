@@ -35,5 +35,13 @@ namespace Git.hm4
             Console.WriteLine($"#1:{resultString_1}\n");
             Console.WriteLine($"#2:{resultString_2}\n{new string('-', 55)}\n{new string('=', 55)}\n");
         }
+
+        static public void Task_WelcomуToTheTMSlesons()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_ReplaceAndRemoveFromString!\'\n{new string('=', 55)}\n");
+            Console.WriteLine($"RESULT:\n");
+            Console.WriteLine($"Welcome" + " " + "to" + " " + "the" + " " + "TMS" + " " + "lesons" + ".");
+            Console.WriteLine($"\n{new string('-', 55)}");
+        }
     }
 }

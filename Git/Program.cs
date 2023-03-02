@@ -28,5 +28,7 @@ public class Program
         HomeTask3.Task_Additional_8();
 
         HomeTask4.Task_IsNumberInTheRange();
+        HomeTask4.Task_WelcomуToTheTMSlesons();
+
     }
 }
