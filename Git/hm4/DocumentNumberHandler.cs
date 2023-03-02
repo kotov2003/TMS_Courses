@@ -14,13 +14,13 @@ namespace Git.hm4
         {
             Console.WriteLine($"\n{new string('=', 55)}\n#Welcome to \'{methodName}!\'#\n{new string('=', 55)}");
             Console.WriteLine("Enter document number in the following format \"xxxx-yyy-xxxx-yyy-xyxy\", where x is a number and y is a letter): ");
-            string? documentNumber = Console.ReadLine();
+            var documentNumber = Console.ReadLine();
             return documentNumber;
         }
 
         static public void Task_DocumentNumber_1()
         {
-            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
             Regex regex = new Regex("[0-9]{4}");
             MatchCollection matches = regex.Matches(documentNumber);
 
@@ -36,7 +36,7 @@ namespace Git.hm4
 
         static public void Task_DocumentNumber_2()
         {
-            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
             var result = Regex.Replace(documentNumber, @"[a-zA-Z]{3}", "***");
 
             Console.WriteLine($"\nRESULT:");
@@ -46,7 +46,7 @@ namespace Git.hm4
 
         static public void Task_DocumentNumber_3()
         {
-            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
             var result_1 = Regex.Replace(documentNumber, @"[0-9]{4}-", @"/");
             var result_2 = Regex.Replace(result_1, @"[0-9]", @"/");
             var result = Regex.Replace(result_2, @"[-]", "");
@@ -58,16 +58,10 @@ namespace Git.hm4
 
         static public void Task_DocumentNumber_4()
         {
-            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
 
             var sb = new StringBuilder(documentNumber);
-            sb.Remove(0,5);
-            sb.Remove(3, 6);
-            sb.Remove(6, 2);
-            sb.Remove(7, 1);
-            sb.Insert(3, "/");
-            sb.Insert(7, "/");
-            sb.Insert(9, "/");
+            sb.Remove(0, 5).Remove(3, 6).Remove(6, 2).Remove(7, 1).Insert(3, "/").Insert(7, "/").Insert(9, "/");
 
             Console.WriteLine($"\nRESULT:");
             Console.WriteLine($"{sb}".ToUpper());
@@ -76,10 +70,10 @@ namespace Git.hm4
 
         static public void Task_DocumentNumber_5()
         {
-            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
 
-            string substring = "abc";  
-            bool existIgnoreCase = documentNumber.Contains(substring, StringComparison.OrdinalIgnoreCase);
+            var substring = "abc";
+            var existIgnoreCase = documentNumber.Contains(substring, StringComparison.OrdinalIgnoreCase);
 
             Console.WriteLine($"\nRESULT:");
 
@@ -97,8 +91,8 @@ namespace Git.hm4
 
         static public void Task_DocumentNumber_6()
         {
-            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
-            string substring = "555";
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var substring = "555";
 
             Console.WriteLine($"\nRESULT:");
 
@@ -108,7 +102,26 @@ namespace Git.hm4
             }
             else
             {
-                Console.WriteLine($"Document number doesn't starts with {substring}.\n");
+                Console.WriteLine($"Document number doesn't start with {substring}.\n");
+            }
+
+            Console.WriteLine($"{new string('=', 55)}\n");
+        }
+
+        static public void Task_DocumentNumber_7()
+        {
+            var documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            var substring = "1a2b";
+
+            Console.WriteLine($"\nRESULT:");
+
+            if (documentNumber?.Substring(documentNumber.Length - 4, 4) == substring)
+            {
+                Console.WriteLine($"Document number ends with {substring}.\n");
+            }
+            else
+            {
+                Console.WriteLine($"Document number doesn't end with {substring}.\n");
             }
 
             Console.WriteLine($"{new string('=', 55)}\n");

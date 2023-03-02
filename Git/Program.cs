@@ -37,6 +37,6 @@ public class Program
         DocumentNumberHandler.Task_DocumentNumber_4();
         DocumentNumberHandler.Task_DocumentNumber_5();
         DocumentNumberHandler.Task_DocumentNumber_6();
-
+        DocumentNumberHandler.Task_DocumentNumber_7();
     }
 }
