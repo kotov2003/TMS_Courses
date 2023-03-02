@@ -25,10 +25,12 @@ namespace Git.hm4
             MatchCollection matches = regex.Matches(documentNumber);
 
             Console.WriteLine($"\nRESULT:");
+
             foreach (Match match in matches)
             {
                 Console.Write($"{match.Value}");
             }
+
             Console.WriteLine();
         }
 
@@ -80,6 +82,7 @@ namespace Git.hm4
             bool existIgnoreCase = documentNumber.Contains(substring, StringComparison.OrdinalIgnoreCase);
 
             Console.WriteLine($"\nRESULT:");
+
             if (existIgnoreCase)
             {
                 Console.WriteLine($"Document number contains {substring}.\n");
@@ -88,6 +91,26 @@ namespace Git.hm4
             {
                 Console.WriteLine($"Document number doesn't contain {substring}.\n");
             }
+
+            Console.WriteLine($"{new string('=', 55)}\n");
+        }
+
+        static public void Task_DocumentNumber_6()
+        {
+            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+            string substring = "555";
+
+            Console.WriteLine($"\nRESULT:");
+
+            if (documentNumber?.Substring(0, 3) == substring)
+            {
+                Console.WriteLine($"Document number starts with {substring}.\n");
+            }
+            else
+            {
+                Console.WriteLine($"Document number doesn't starts with {substring}.\n");
+            }
+
             Console.WriteLine($"{new string('=', 55)}\n");
         }
     }
