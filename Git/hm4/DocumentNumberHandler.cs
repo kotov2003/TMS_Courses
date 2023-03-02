@@ -71,5 +71,24 @@ namespace Git.hm4
             Console.WriteLine($"{sb}".ToUpper());
             Console.WriteLine($"{new string('=', 55)}\n");
         }
+
+        static public void Task_DocumentNumber_5()
+        {
+            string? documentNumber = EnterDocumentNumber(MethodBase.GetCurrentMethod().Name);
+
+            string substring = "abc";  
+            bool existIgnoreCase = documentNumber.Contains(substring, StringComparison.OrdinalIgnoreCase);
+
+            Console.WriteLine($"\nRESULT:");
+            if (existIgnoreCase)
+            {
+                Console.WriteLine($"Document number contains {substring}.\n");
+            }
+            else
+            {
+                Console.WriteLine($"Document number doesn't contain {substring}.\n");
+            }
+            Console.WriteLine($"{new string('=', 55)}\n");
+        }
     }
 }
