@@ -43,5 +43,19 @@ namespace Git.hm4
             Console.WriteLine($"Welcome" + " " + "to" + " " + "the" + " " + "TMS" + " " + "lesons" + ".");
             Console.WriteLine($"\n{new string('-', 55)}");
         }
+
+        static public void Task_StringDevidedToTwoParts()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\nWelcome to \'Task_StringDevidedToTwoParts!\'\n{new string('=', 55)}");
+
+            var initialString = "teamwithsomeofexcersicesabcwanttomakeitbetter";
+            string delimiter = "abc"; 
+            var firstPart = initialString.Split(delimiter).First();
+            var secondPart = initialString.Split(delimiter).Last();
+
+            Console.WriteLine($"INITIAL STRING:\n{initialString}");
+            Console.WriteLine($"\nRESULT DATA:\n{firstPart}\n{secondPart}");
+            Console.WriteLine($"{new string('-', 55)}");
+        }
     }
 }

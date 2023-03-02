@@ -29,6 +29,6 @@ public class Program
 
         HomeTask4.Task_IsNumberInTheRange();
         HomeTask4.Task_WelcomуToTheTMSlesons();
-
+        HomeTask4.Task_StringDevidedToTwoParts();
     }
 }
