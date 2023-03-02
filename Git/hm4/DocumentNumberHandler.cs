@@ -2,45 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Git.hm4
 {
     public class DocumentNumberHandler
     {
-        static public void Task_DocumentNumber_1()
+        static private string? EnterDocumentNumber()
         {
+            Console.WriteLine($"\n{new string('=', 55)}\n#1 Welcome to \'Task_DocumentNumber_1!\'\n{new string('=', 55)}");
             Console.WriteLine("Enter document number in the following format \"xxxx-yyy-xxxx-yyy-xyxy\", where x is a number and y is a letter): ");
             string? documentNumber = Console.ReadLine();
+            return documentNumber;
+        }
 
-            var result = documentNumber.Split('-');
+        static public void Task_DocumentNumber_1()
+        {
+            string? documentNumber = EnterDocumentNumber();
+            Regex regex = new Regex("[0-9]{4}");
+            MatchCollection matches = regex.Matches(documentNumber);
 
-            Console.WriteLine($"\n{new string('=', 55)}\n#1 Welcome to \'Task_DocumentNumber_1!\'\n{new string('=', 55)}");
-            Console.WriteLine($"TASKS:\nInitial number:{documentNumber}\n");
-            Console.WriteLine($"RESULT:");
-            Console.WriteLine($"{result[0]}{result[2]}");
-            Console.WriteLine($"{new string('=', 55)}\n\n\n");
+            Console.WriteLine($"\nRESULT:");
+            foreach (Match match in matches)
+            {
+                Console.Write($"{match.Value}");
+            }
+            Console.WriteLine();
         }
 
         static public void Task_DocumentNumber_2()
         {
-            Console.WriteLine("Enter document number in the following format \"xxxx-yyy-xxxx-yyy-xyxy\", where x is a number and y is a letter): ");
-            string? documentNumber = Console.ReadLine();
-
-            var documentNumberArray = documentNumber.ToCharArray();
-
-            for (int i = 0; i < documentNumberArray.Length; i++)
-            {
-                if (char.IsLetter(documentNumberArray[i]))
-                {
-                    documentNumberArray[i] = '*';
-                }
-            }
+            string? documentNumber = EnterDocumentNumber();
+            var result = Regex.Replace(documentNumber, @"[a-zA-Z]{3}", "***");
 
             Console.WriteLine($"\n{new string('=', 55)}\n#1 Welcome to \'Task_DocumentNumber_2!\'\n{new string('=', 55)}");
             Console.WriteLine($"TASKS:\nInitial number:{documentNumber}\n");
             Console.WriteLine($"RESULT:");
-            Console.WriteLine($"{new string(documentNumberArray)}");
+            Console.WriteLine($"{result}");
             Console.WriteLine($"{new string('=', 55)}\n\n\n");
         }
     }
