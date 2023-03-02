@@ -1,6 +1,7 @@
 ﻿using Git.hm1;
 using Git.hm2;
 using Git.hm3;
+using Git.hm4;
 
 public class Program
 {
@@ -25,5 +26,7 @@ public class Program
         HomeTask3.Task_Additional_6();
         HomeTask3.Task_Additional_7();
         HomeTask3.Task_Additional_8();
+
+        HomeTask4.Task_IsNumberInTheRange();
     }
 }
