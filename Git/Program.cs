@@ -42,5 +42,6 @@ public class Program
         //DocumentNumberHandler.Task_DocumentNumber_7();
 
         HomeTask5.Task_Phones();
+        HomeTask5.Task_CreditCard();
     }
 }

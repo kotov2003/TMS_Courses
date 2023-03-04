@@ -11,7 +11,9 @@ namespace Git.hm5
     public class Phone
     {
         public string number;
+
         public string model;
+
         public double weight;
 
         public Phone(string number, string model, double weight) : this(number, model)
@@ -28,7 +30,6 @@ namespace Git.hm5
         public Phone()
         {
         }
-
 
         public void receiveCall(string name)
         {
@@ -53,6 +54,5 @@ namespace Git.hm5
         {
             return number;
         }
-
     }
 }

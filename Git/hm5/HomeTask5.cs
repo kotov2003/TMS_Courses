@@ -39,5 +39,21 @@ namespace Git.hm5
             Console.WriteLine("Номера телефонов:");
             phones.First().sendMessage("111", "222", "333");
         }
+
+        static public void Task_CreditCard()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\n#Welcome to \'Task_CreditCard!\'#\n{new string('=', 55)}");
+            var creditCard_1 = new CreditCard() { accountNumber = "1", currentTotal = 100 };
+            var creditCard_2 = new CreditCard() { accountNumber = "2", currentTotal = 200 };
+            var creditCard_3 = new CreditCard() { accountNumber = "3", currentTotal = 300 };
+
+            creditCard_1.PutMoney(100);
+            creditCard_2.PutMoney(100);
+            creditCard_3.WithdrawMoney(100);
+
+            creditCard_1.ShowAccountInfo();
+            creditCard_2.ShowAccountInfo();
+            creditCard_3.ShowAccountInfo();
+        }
     }
 }
