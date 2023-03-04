@@ -2,6 +2,8 @@
 using Git.hm2;
 using Git.hm3;
 using Git.hm4;
+using Git.hm5;
+using System.Reflection;
 
 public class Program
 {
@@ -27,16 +29,18 @@ public class Program
         //HomeTask3.Task_Additional_7();
         //HomeTask3.Task_Additional_8();
 
-        HomeTask4.Task_IsNumberInTheRange();
-        HomeTask4.Task_WelcomуToTheTMSlesons();
-        HomeTask4.Task_StringDevidedToTwoParts();
-        HomeTask4.Task_BadGoodDay();
-        DocumentNumberHandler.Task_DocumentNumber_1();
-        DocumentNumberHandler.Task_DocumentNumber_2();
-        DocumentNumberHandler.Task_DocumentNumber_3();
-        DocumentNumberHandler.Task_DocumentNumber_4();
-        DocumentNumberHandler.Task_DocumentNumber_5();
-        DocumentNumberHandler.Task_DocumentNumber_6();
-        DocumentNumberHandler.Task_DocumentNumber_7();
+        //HomeTask4.Task_IsNumberInTheRange();
+        //HomeTask4.Task_WelcomуToTheTMSlesons();
+        //HomeTask4.Task_StringDevidedToTwoParts();
+        //HomeTask4.Task_BadGoodDay();
+        //DocumentNumberHandler.Task_DocumentNumber_1();
+        //DocumentNumberHandler.Task_DocumentNumber_2();
+        //DocumentNumberHandler.Task_DocumentNumber_3();
+        //DocumentNumberHandler.Task_DocumentNumber_4();
+        //DocumentNumberHandler.Task_DocumentNumber_5();
+        //DocumentNumberHandler.Task_DocumentNumber_6();
+        //DocumentNumberHandler.Task_DocumentNumber_7();
+
+        HomeTask5.Task_Phones();
     }
 }
