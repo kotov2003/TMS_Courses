@@ -55,5 +55,16 @@ namespace Git.hm5
             creditCard_2.ShowAccountInfo();
             creditCard_3.ShowAccountInfo();
         }
+
+        static public void Task_ATM()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\n#Welcome to \'Task_ATM!\'#\n{new string('=', 55)}");
+            var atm = new ATM(20, 20, 20);
+
+            var isSuccessful_1 = atm.WithdrawMoney(470);
+            var isSuccessful_2 = atm.WithdrawMoney(20);
+            var isSuccessful_3 = atm.WithdrawMoney(90);
+            var isSuccessful_4 = atm.WithdrawMoney(110);
+        }
     }
 }

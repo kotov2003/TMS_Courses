@@ -43,5 +43,7 @@ public class Program
 
         HomeTask5.Task_Phones();
         HomeTask5.Task_CreditCard();
+        HomeTask5.Task_ATM();
+
     }
 }
