@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Git.hm5.clinic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -65,6 +66,16 @@ namespace Git.hm5
             var isSuccessful_2 = atm.WithdrawMoney(20);
             var isSuccessful_3 = atm.WithdrawMoney(90);
             var isSuccessful_4 = atm.WithdrawMoney(110);
+        }
+
+        static public void Task_Clinic()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\n#Welcome to \'Task_Clinic!\'#\n{new string('=', 55)}");
+
+            var plan = new TreatmentPlan(2);
+            var patient = new Patient();
+            patient.AddTreatmentPlan(plan);
+            patient.AssignDoctorAndTreat();
         }
     }
 }
