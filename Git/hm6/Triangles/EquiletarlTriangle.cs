@@ -12,7 +12,6 @@ namespace Git.hm6.Triangles
         {
         }
 
-
         public override double GetSquare()
         {
             Console.WriteLine("Get square EquiletarlTriangle");

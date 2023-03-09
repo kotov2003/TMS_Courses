@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Git.hm6.Triangles
 {
-    internal class Triangle
+    internal class Triangle:Shape
     {
         public double firstSide;
 
@@ -21,7 +21,7 @@ namespace Git.hm6.Triangles
             this.thirdSide = thirdSide;
         }
 
-        public virtual double GetSquare()
+        public override double GetSquare()
         {
             Console.WriteLine("Get square Heron formula");
             double semiPerimetr = (firstSide + secondSide + thirdSide) / 2;

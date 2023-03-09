@@ -12,7 +12,6 @@ namespace Git.hm6.Triangles
         {
         }
 
-
         public override double GetSquare()
         {
             if (firstSide > secondSide)
@@ -38,7 +37,6 @@ namespace Git.hm6.Triangles
                 }
             }
         }
-
 
         private double GetSquareForRightTriangle(double firstSide, double secondSide)
         {

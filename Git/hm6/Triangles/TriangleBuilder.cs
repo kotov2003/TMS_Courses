@@ -18,19 +18,21 @@ namespace Git.hm6.Triangles
                 return new EquiletarlTriangle(firstSide, secondSide, thirdSide);
             }
 
-            var f_1_1 = Math.Round(firstSide * firstSide + secondSide * secondSide, 2);
-            var f_1_2 = Math.Round(thirdSide * thirdSide, 2);
 
-            var f_2_1 = Math.Round(firstSide * firstSide + thirdSide * thirdSide, 2);
-            var f_2_2 = Math.Round(secondSide * secondSide, 2);
+            double[] sideArray = new double[3]{ firstSide, secondSide, thirdSide };
+            Array.Sort(sideArray);
+            double firstSideRounded = Math.Round(sideArray[0], 4, MidpointRounding.ToZero);
+            double secondSideRounded = Math.Round(sideArray[1], 4, MidpointRounding.ToZero);
+            double thirdSideRounded = Math.Round(sideArray[2], 4, MidpointRounding.ToZero);
 
-            var f_3_1 = Math.Round(thirdSide * thirdSide + secondSide * secondSide, 2);
-            var f_3_2 = Math.Round(firstSide * firstSide, 2);
+            var f_1_1 = firstSideRounded * firstSideRounded + secondSideRounded * secondSideRounded;
+            var f_1_2 = thirdSideRounded * thirdSideRounded;
 
-            if ((f_1_1 == f_1_2) || (f_2_1 == f_2_2) || (f_3_1 == f_3_2))
+            if (Math.Abs(f_1_1 - f_1_2) < 0.001)
             {
                 return new RightTriangle(firstSide, secondSide, thirdSide);
             }
+
             return new Triangle(firstSide, secondSide, thirdSide);
         }
     }

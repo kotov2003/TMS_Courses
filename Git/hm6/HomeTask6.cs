@@ -11,8 +11,15 @@ namespace Git.hm6
     {
         static public void Task_TriangleAreas()
         {
-            Triangle triangle = new TriangleBuilder().CreateTriangle(3.1, 4.1, 5.14);
+            Triangle triangle = new TriangleBuilder().CreateTriangle(5.14, 3.1, 4.1);
             Console.Write(triangle.GetSquare());
+
+            Shape[] shapeList = new Shape[] { new Triangle(10, 20, 20), new RightTriangle(3, 4, 5), new Rectangle(2, 3), new Square(5) };
+
+            foreach (var item in shapeList)
+            {
+                Console.WriteLine(item.GetSquare());
+            }
         }
     }
 }
