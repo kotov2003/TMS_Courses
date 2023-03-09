@@ -3,6 +3,7 @@ using Git.hm2;
 using Git.hm3;
 using Git.hm4;
 using Git.hm5;
+using Git.hm6;
 using System.Reflection;
 
 public class Program
@@ -41,9 +42,10 @@ public class Program
         //DocumentNumberHandler.Task_DocumentNumber_6();
         //DocumentNumberHandler.Task_DocumentNumber_7();
 
-        HomeTask5.Task_Phones();
-        HomeTask5.Task_CreditCard();
-        HomeTask5.Task_ATM();
-        HomeTask5.Task_Clinic();
+        //HomeTask5.Task_Phones();
+        //HomeTask5.Task_CreditCard();
+        //HomeTask5.Task_ATM();
+        //HomeTask5.Task_Clinic();
+        HomeTask6.Task_TriangleAreas();
     }
 }
