@@ -46,6 +46,7 @@ public class Program
         //HomeTask5.Task_CreditCard();
         //HomeTask5.Task_ATM();
         //HomeTask5.Task_Clinic();
-        HomeTask6.Task_TriangleAreas();
+        //HomeTask6.Task_TriangleAreas();
+        HomeTask6.Task_Clinic();
     }
 }

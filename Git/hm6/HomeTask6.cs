@@ -1,4 +1,5 @@
-﻿using Git.hm6.Triangles;
+﻿using Git.hm6.clinic;
+using Git.hm6.Triangles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,16 @@ namespace Git.hm6
             {
                 Console.WriteLine(item.GetSquare());
             }
+        }
+
+        static public void Task_Clinic()
+        {
+            Console.WriteLine($"\n{new string('=', 55)}\n#Welcome to \'Task_Clinic!\'#\n{new string('=', 55)}");
+
+            var plan = new TreatmentPlan(2);
+            var patient = new Patient();
+            patient.AddTreatmentPlan(plan);
+            patient.AssignDoctorAndTreat();
         }
     }
 }
