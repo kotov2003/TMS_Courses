@@ -55,6 +55,8 @@ namespace Git.hm7
             TransportService.PrintTransportType(new CityTrain() { Number = "2", SeatsNumber = 3, DepartureTime = new DateTime(2022, 11, 22, 07, 15, 00), Destination = "London" });
             TransportService.PrintTransportType(new Trolleybus { Number = "6", SeatsNumber = 99, DepartureTime = new DateTime(2021, 11, 25, 06, 15, 00), Destination = "New York" });
 
+            var transportName = new Bus() { Number = "1", SeatsNumber = 7, DepartureTime = new DateTime(2022, 11, 22, 06, 15, 00), Destination = "London" }.ToString();
+            Console.WriteLine($"\n\n{new string('=', 20)}\nTransport name from sealed method: {transportName}");
         }
 
 

@@ -20,6 +20,10 @@ namespace Git.hm7.Transport
 
         public abstract List<TransportType> GetTransportType();
 
+        public override sealed string ToString()
+        {
+            return this.GetType().Name;
+        }
 
     }
 }
