@@ -50,7 +50,7 @@ public class Program
         //HomeTask6.Task_TriangleAreas();
         //HomeTask6.Task_Clinic();
 
-        HomeTask7.Task_CarPark();
-        //HomeTask7.Task_Vehicles();
+        HomeTask7_1.Task_CarPark();
+        //HomeTask7_2.Task_Vehicles();
     }
 }
