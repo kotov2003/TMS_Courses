@@ -25,10 +25,6 @@ namespace Git.hm7
                 new Trolleybus{Number ="6",SeatsNumber=99, DepartureTime = new DateTime(2021, 11, 25, 06, 15, 00), Destination = "New York"}
             };
 
-
-            PrintTransportTypes(transportsList);
-
-
             var orderedBySeatsNumbertList = from item in transportsList
                                             orderby item.SeatsNumber
                                             select item;
@@ -54,6 +50,10 @@ namespace Git.hm7
             Console.WriteLine($"\n\n{new string('=', 20)}\nSerach By Departure time later than '{searchRequest4.DepartureDate}':");
             PrintTransportInfo(searchResult4);
 
+            Console.WriteLine($"\n\n{new string('=', 20)}\nTransport types:");
+            TransportService.PrintTransportType(new Bus() { Number = "1", SeatsNumber = 7, DepartureTime = new DateTime(2022, 11, 22, 06, 15, 00), Destination = "London" });
+            TransportService.PrintTransportType(new CityTrain() { Number = "2", SeatsNumber = 3, DepartureTime = new DateTime(2022, 11, 22, 07, 15, 00), Destination = "London" });
+            TransportService.PrintTransportType(new Trolleybus { Number = "6", SeatsNumber = 99, DepartureTime = new DateTime(2021, 11, 25, 06, 15, 00), Destination = "New York" });
 
         }
 
@@ -98,10 +98,6 @@ namespace Git.hm7
                    select item;
         }
 
-
-
-
-
         private static void PrintTransportInfo(IEnumerable<Transports> transportList)
         {
             foreach (Transports transport in transportList)
@@ -112,21 +108,6 @@ namespace Git.hm7
                 Console.WriteLine($"Seats Number = {transport.SeatsNumber}");
                 Console.WriteLine($"Destination = {transport.Destination}");
                 Console.WriteLine($"DepartureTime = {transport.DepartureTime}");
-            }
-        }
-
-        private static void PrintTransportTypes(IEnumerable<Transports> transportList)
-        {
-            foreach (Transports transport in transportList)
-            {
-                Console.WriteLine(new string('=', 20));
-                Console.WriteLine($"{transport.GetType().Name} types:");
-                Console.WriteLine(new string('-', 20));
-                foreach (TransportType type in transport.GetTransportType())
-                {
-                    Console.WriteLine(type.ToString());
-                }
-                Console.WriteLine(new string('=', 20));
             }
         }
     }
