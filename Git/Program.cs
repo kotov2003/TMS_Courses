@@ -51,6 +51,6 @@ public class Program
         //HomeTask6.Task_Clinic();
 
         HomeTask7_1.Task_CarPark();
-        //HomeTask7_2.Task_Vehicles();
+        HomeTask7_2.Task_Vehicles();
     }
 }

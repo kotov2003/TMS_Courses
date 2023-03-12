@@ -24,6 +24,5 @@ namespace Git.hm7.CarPark
         {
             return this.GetType().Name;
         }
-
     }
 }
