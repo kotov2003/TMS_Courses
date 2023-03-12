@@ -4,7 +4,7 @@ using Git.hm3;
 using Git.hm4;
 using Git.hm5;
 using Git.hm6;
-using System.Reflection;
+using Git.hm7;
 
 public class Program
 {
@@ -46,7 +46,11 @@ public class Program
         //HomeTask5.Task_CreditCard();
         //HomeTask5.Task_ATM();
         //HomeTask5.Task_Clinic();
+
         //HomeTask6.Task_TriangleAreas();
-        HomeTask6.Task_Clinic();
+        //HomeTask6.Task_Clinic();
+
+        HomeTask7.Task_CarPark();
+
     }
 }
