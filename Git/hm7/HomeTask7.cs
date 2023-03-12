@@ -15,14 +15,21 @@ namespace Git.hm7
             Bus bus_A = new Bus();
             Console.WriteLine($" Properties value of \"{nameof(bus_A)}\" are:\n {bus_A.Destination}, {bus_A.Number}, {bus_A.DepartureTime}, {bus_A.SeatsNumber}");
 
+            var bus = new Bus() { Number = "1", SeatsNumber = 7, DepartureTime = new DateTime(2022, 11, 22, 06, 15, 00), Destination = "London" };
+            var cityTrain = new CityTrain() { Number = "2", SeatsNumber = 3, DepartureTime = new DateTime(2022, 11, 22, 07, 15, 00), Destination = "London" };
+            var metro = new Metro() { Number = "3", SeatsNumber = 1, DepartureTime = new DateTime(2022, 11, 22, 06, 05, 00), Destination = "London" };
+            var taxi = new Taxi() { Number = "4", SeatsNumber = 8, DepartureTime = new DateTime(2020, 11, 23, 09, 00, 00), Destination = "Paris" };
+            var tram = new Tram() { Number = "5", SeatsNumber = 0, DepartureTime = new DateTime(2022, 11, 24, 06, 08, 00), Destination = "London" };
+            var trolleybus = new Trolleybus { Number = "6", SeatsNumber = 99, DepartureTime = new DateTime(2021, 11, 25, 06, 15, 00), Destination = "New York" };
+
             List<Transports> transportsList = new List<Transports>()
             {
-                new Bus(){Number ="1", SeatsNumber=7, DepartureTime = new DateTime(2022, 11, 22, 06, 15, 00), Destination = "London"},
-                new CityTrain(){Number ="2",SeatsNumber=3, DepartureTime = new DateTime(2022, 11, 22, 07, 15, 00), Destination = "London"},
-                new Metro(){Number ="3",SeatsNumber=1, DepartureTime = new DateTime(2022, 11, 22, 06, 05, 00), Destination = "London"},
-                new Taxi() {Number ="4", SeatsNumber = 8 , DepartureTime = new DateTime(2020, 11, 23, 09, 00, 00), Destination = "Paris"},
-                new Tram(){Number ="5",SeatsNumber=0, DepartureTime = new DateTime(2022, 11, 24, 06, 08, 00), Destination = "London"},
-                new Trolleybus{Number ="6",SeatsNumber=99, DepartureTime = new DateTime(2021, 11, 25, 06, 15, 00), Destination = "New York"}
+                bus,
+                cityTrain,
+                metro,
+                taxi,
+                tram,
+                trolleybus
             };
 
             var orderedBySeatsNumbertList = from item in transportsList
@@ -51,11 +58,11 @@ namespace Git.hm7
             PrintTransportInfo(searchResult4);
 
             Console.WriteLine($"\n\n{new string('=', 20)}\nTransport types:");
-            TransportService.PrintTransportType(new Bus() { Number = "1", SeatsNumber = 7, DepartureTime = new DateTime(2022, 11, 22, 06, 15, 00), Destination = "London" });
-            TransportService.PrintTransportType(new CityTrain() { Number = "2", SeatsNumber = 3, DepartureTime = new DateTime(2022, 11, 22, 07, 15, 00), Destination = "London" });
-            TransportService.PrintTransportType(new Trolleybus { Number = "6", SeatsNumber = 99, DepartureTime = new DateTime(2021, 11, 25, 06, 15, 00), Destination = "New York" });
+            TransportService.PrintTransportType(bus);
+            TransportService.PrintTransportType(cityTrain);
+            TransportService.PrintTransportType(bus);
 
-            var transportName = new Bus() { Number = "1", SeatsNumber = 7, DepartureTime = new DateTime(2022, 11, 22, 06, 15, 00), Destination = "London" }.ToString();
+            var transportName = bus.ToString();
             Console.WriteLine($"\n\n{new string('=', 20)}\nTransport name from sealed method: {transportName}");
         }
 
