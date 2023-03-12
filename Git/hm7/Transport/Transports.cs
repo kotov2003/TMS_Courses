@@ -4,18 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Git.hm7
+namespace Git.hm7.Transport
 {
-    internal class Bus
+    internal abstract class Transports
     {
         private string destination = "Default destination";
         public string Destination
         {
             get { return destination; }
             set { destination = value; }
-        } 
+        }
         public string Number { get; set; } = "Default number";
-        public string DepartureTime { get; set; } = "Default departure time";
-        public string SeatsNumber { get; set; } = "Default seats number";
+        public DateTime DepartureTime { get; set; } = default;
+        public int SeatsNumber { get; set; } = 0;
+
+        public abstract List<TransportType> GetTransportType();
+
+
     }
 }
