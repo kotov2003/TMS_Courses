@@ -5,6 +5,7 @@ using Git.hm4;
 using Git.hm5;
 using Git.hm6;
 using Git.hm7;
+using Git.hm8;
 
 public class Program
 {
@@ -50,7 +51,9 @@ public class Program
         //HomeTask6.Task_TriangleAreas();
         //HomeTask6.Task_Clinic();
 
-        HomeTask7_1.Task_CarPark();
-        HomeTask7_2.Task_Vehicles();
+        //HomeTask7_1.Task_CarPark();
+        //HomeTask7_2.Task_Vehicles();
+
+        HomeTask8.RegisterNewAccount("test", "q1w", "q1w");
     }
 }
