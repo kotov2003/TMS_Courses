@@ -10,6 +10,6 @@ namespace Git.hm8
     {
         public WrongLoginException() { }
 
-        public WrongLoginException(string msg) : base(msg) { }
+        public WrongLoginException(string message) : base(message) { }
     }
 }
