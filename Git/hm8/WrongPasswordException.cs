@@ -10,6 +10,6 @@ namespace Git.hm8
     {
         public WrongPasswordException() { }
 
-        public WrongPasswordException(string msg) : base(msg) { }
+        public WrongPasswordException(string message) : base(message) { }
     }
 }
