@@ -21,6 +21,5 @@
                 item.ShowInfo();
             }
         }
-
     }
 }
