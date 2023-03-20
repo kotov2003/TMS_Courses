@@ -57,10 +57,10 @@ public class Program
 
         //HomeTask8.RegisterNewAccount("test", "q1w", "q1w");
 
-        //HomeTask9.Task_ArrayList();
-        //HomeTask9.Task_Dictionary();
-        //HomeTask9.Task_ProductsStore_1_1();
-        ///HomeTask9.Task_ProductsStore_1_2();
+        HomeTask9.Task_ArrayList();
+        HomeTask9.Task_Dictionary();
+        HomeTask9.Task_ProductsStore_1_1();
+        HomeTask9.Task_ProductsStore_1_2();
         HomeTask9.Task_ProductDictionary();
     }
 }

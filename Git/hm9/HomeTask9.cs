@@ -1,7 +1,5 @@
-﻿using Git.hm6.Triangles;
-using Git.hm9.Products;
+﻿using Git.hm9.Products;
 using System.Collections;
-using System.Security.Cryptography;
 
 namespace Git.hm9
 {
@@ -141,6 +139,9 @@ namespace Git.hm9
             ShowName(people);
             ShowCounts(people);
 
+            var list = DictionaryToList(people);
+            ListToDictiobary(list);
+
         }
 
         private static void ShowNameAndCounts(Dictionary<string, int> people)
@@ -153,18 +154,31 @@ namespace Git.hm9
 
         private static void ShowName(Dictionary<string, int> people)
         {
-            foreach (var person in people)
+            List<string> keys = people.Keys.ToList();
+            foreach (var key in keys)
             {
-                Console.WriteLine($"Name: {person.Key}");
+                Console.WriteLine($"Name: {key}");
             }
         }
 
         private static void ShowCounts(Dictionary<string, int> people)
         {
-            foreach (var person in people)
+            List<int> values = people.Values.ToList();
+            foreach (var value in values)
             {
-                Console.WriteLine($"Count: {person.Value}");
+                Console.WriteLine($"Count: {value}");
             }
+        }
+
+        private static List<KeyValuePair<string, int>> DictionaryToList(Dictionary<string, int> people)
+        {
+            List<KeyValuePair<string, int>> persons = people.ToList();
+            return persons;
+        }
+
+        private static void ListToDictiobary(List<KeyValuePair<string, int>> persons)
+        {
+            Dictionary<string, int> people = new Dictionary<string, int>(persons);
         }
     }
 }
