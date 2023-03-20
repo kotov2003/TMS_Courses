@@ -1,6 +1,7 @@
 ﻿using Git.hm6.Triangles;
 using Git.hm9.Products;
 using System.Collections;
+using System.Security.Cryptography;
 
 namespace Git.hm9
 {
@@ -62,10 +63,17 @@ namespace Git.hm9
                 item.ShowInfo();
             }
 
+            Console.WriteLine($"\nThese products are expired:");
+            var expiredItems = from item in productBase where item.ExpirationDate < DateTime.Now select item;
+            foreach (var item in expiredItems)
+            {
+                item.ShowInfo();
+            }
 
-            Сonsignment batch = new Сonsignment( "batch #1", productBase.First(), 100, 10);
 
-            Console.WriteLine(); 
+            Сonsignment batch = new Сonsignment("batch #1", productBase.First(), 100, 10);
+
+            Console.WriteLine();
             batch.ShowInfo();
 
 

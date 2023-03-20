@@ -28,7 +28,7 @@ namespace Git.hm9.Products
 
         public override void ShowInfo()
         {
-            Console.WriteLine($"Сonsignment info: Сonsignment Name = {СonsignmentName}, Сonsignment Price = {СonsignmentPrice}, Quantity = {Quantity}. \nProduct discription:");
+            Console.WriteLine($"Сonsignment info: Сonsignment Name = {СonsignmentName}, Сonsignment Price = {СonsignmentPrice}, Quantity = {Quantity}. \nСonsignment product discription:");
             base.ShowInfo();
         }
     }
