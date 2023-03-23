@@ -1,4 +1,5 @@
 ﻿using Git.hm1;
+using Git.hm10;
 using Git.hm2;
 using Git.hm3;
 using Git.hm4;
@@ -57,10 +58,12 @@ public class Program
 
         //HomeTask8.RegisterNewAccount("test", "q1w", "q1w");
 
-        HomeTask9.Task_ArrayList();
-        HomeTask9.Task_Dictionary();
-        HomeTask9.Task_ProductsStore_1_1();
-        HomeTask9.Task_ProductsStore_1_2();
-        HomeTask9.Task_ProductDictionary();
+        //HomeTask9.Task_ArrayList();
+        //HomeTask9.Task_Dictionary();
+        //HomeTask9.Task_ProductsStore_1_1();
+        //HomeTask9.Task_ProductsStore_1_2();
+        //HomeTask9.Task_ProductDictionary();
+
+        HomeTask10.Task_Generic_1();
     }
 }
