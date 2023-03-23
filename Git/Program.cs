@@ -6,6 +6,7 @@ using Git.hm5;
 using Git.hm6;
 using Git.hm7;
 using Git.hm8;
+using Git.hm9;
 
 public class Program
 {
@@ -54,6 +55,12 @@ public class Program
         //HomeTask7_1.Task_CarPark();
         //HomeTask7_2.Task_Vehicles();
 
-        HomeTask8.RegisterNewAccount("test", "q1w", "q1w");
+        //HomeTask8.RegisterNewAccount("test", "q1w", "q1w");
+
+        HomeTask9.Task_ArrayList();
+        HomeTask9.Task_Dictionary();
+        HomeTask9.Task_ProductsStore_1_1();
+        HomeTask9.Task_ProductsStore_1_2();
+        HomeTask9.Task_ProductDictionary();
     }
 }
