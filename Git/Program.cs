@@ -64,6 +64,8 @@ public class Program
         //HomeTask9.Task_ProductsStore_1_2();
         //HomeTask9.Task_ProductDictionary();
 
-        HomeTask10.Task_Generic_1();
+        //HomeTask10.Task_Generic_1();
+        HomeTask10.Task_CarEngines();
+
     }
 }

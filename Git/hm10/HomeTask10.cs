@@ -1,4 +1,6 @@
-﻿namespace Git.hm10
+﻿using Git.hm10.car;
+
+namespace Git.hm10
 {
     public class HomeTask10
     {
@@ -41,6 +43,23 @@
         private static void printElementValue<T>(string title, T element)
         {
             Console.WriteLine(title + element);
+        }
+
+
+        static public void Task_CarEngines()
+        {
+            var car_diesel = new Car<Diesel>(new Diesel());
+            var car_electric = new Car<Electric>(new Electric());
+            var car_petrol = new Car<Petrol>(new Petrol());
+
+            car_diesel.Movement();
+            car_diesel.RefillingCar();
+
+            car_electric.Movement();
+            car_electric.RefillingCar();
+
+            car_petrol.Movement();
+            car_petrol.RefillingCar();
         }
     }
 }
