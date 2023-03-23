@@ -45,7 +45,6 @@ namespace Git.hm10
             Console.WriteLine(title + element);
         }
 
-
         static public void Task_CarEngines()
         {
             var car_diesel = new Car<Diesel>(new Diesel());
@@ -60,6 +59,19 @@ namespace Git.hm10
 
             car_petrol.Movement();
             car_petrol.RefillingCar();
+        }
+
+        static public void Task_Point()
+        {
+            var PointA = new Point<int>(10, 10);
+            var PointB = new Point<int>(5, 5);
+            var distanceAB = PointA.GetDistanceToPoint(PointB);
+            Console.WriteLine($"Distance between point A({PointA.X},{PointA.Y}) and point B({PointB.X},{PointB.Y}) is {distanceAB}");
+
+            var PointC = new Point<double>(3.1, 5.5);
+            var PointD = new Point<double>(6.0, 9.4);
+            var distanceCD = PointC.GetDistanceToPoint(PointD);
+            Console.WriteLine($"Distance between point A({PointC.X},{PointC.Y}) and point B({PointD.X},{PointD.Y}) is {distanceCD}");
         }
     }
 }
