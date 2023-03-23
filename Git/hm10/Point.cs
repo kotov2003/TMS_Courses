@@ -32,8 +32,7 @@
 
         public double GetDistanceToPoint(Point<T> point)
         {
-            var result = Math.Sqrt(Math.Pow(Convert.ToDouble(point.X) - Convert.ToDouble(x), 2) + Math.Pow(Convert.ToDouble(point.Y) - Convert.ToDouble(y), 2));
-            return result;
+            return Math.Sqrt(Math.Pow(Convert.ToDouble(point.X) - Convert.ToDouble(x), 2) + Math.Pow(Convert.ToDouble(point.Y) - Convert.ToDouble(y), 2));           
         }
     }
 }
