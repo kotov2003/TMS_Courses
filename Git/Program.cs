@@ -11,6 +11,7 @@ using Git.hm6;
 using Git.hm7;
 using Git.hm8;
 using Git.hm9;
+using Git.hmAd;
 
 public class Program
 {
@@ -74,5 +75,8 @@ public class Program
         HomeTask11.Task_PriceMonitoring();
         HomeTask11_2.Task_PriceMonitoring_Observer();
         HomeTask11_3.Task_PriceMonitoring_Events();
+        HomeTaskAdditinal.Task_1();
+        HomeTaskAdditinal.Task_2();
+        HomeTaskAdditinal.Task_3();
     }
 }
