@@ -9,6 +9,42 @@ namespace Git.hmAd
 {
     public class HomeTaskAdditinal
     {
+        public static void Task_1()
+        {
+            int[] intArray = {2, 1, 5, 3, 4, 5 };
+
+            Console.WriteLine("Initial array:");
+
+            foreach (int i in intArray)
+            {
+                Console.Write($"{i} ");
+
+            }
+
+            int max = 0;
+            int premax = 0;
+
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                if (intArray[i] == max)
+                {
+                    continue;
+                }
+
+                if (intArray[i] > max)
+                {
+                    premax = max;
+                    max = intArray[i];
+                }
+                else if (intArray[i] > premax)
+                {
+                    premax = intArray[i];
+                }
+            }
+
+            Console.WriteLine($"\nSecond max is: {premax}");
+        }
+
         public static void Task_2()
         {
             int[] intArray = { 0, 1, 0, 1, 1, 0 };
@@ -22,6 +58,7 @@ namespace Git.hmAd
             }
 
             SortArray(intArray, 0, intArray.Length - 1);
+            //var sortedArray = intArray.Select(i => i).OrderBy(i => i);
 
             Console.WriteLine("\nResult array:");
 
