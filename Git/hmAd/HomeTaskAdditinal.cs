@@ -43,7 +43,7 @@ namespace Git.hmAd
                 }
             }
 
-            Console.WriteLine($"\nSecond max is: {premax}");
+            Console.WriteLine($"\nSecond max is: {premax}\n");
         }
 
         public static void Task_2()
@@ -108,7 +108,7 @@ namespace Git.hmAd
             int[] intArray = { 2, 3, 9, 4, 7, 16, 1, 18, 10, 4 };
             int number = 20;
 
-            Console.WriteLine("Initial array:");
+            Console.WriteLine("\n\nInitial array:");
 
             foreach (int i in intArray)
             {
@@ -116,7 +116,7 @@ namespace Git.hmAd
 
             }
 
-            Console.WriteLine($"\n Is it there: {FindNumber(intArray, number)}");
+            Console.WriteLine($"\nCan we get sum = {number}: {FindNumber(intArray, number)}");
         }
 
         private static bool FindNumber(int[] intArray, int number)

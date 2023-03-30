@@ -1,4 +1,6 @@
-﻿namespace Git.hm11_2
+﻿using System.Diagnostics;
+
+namespace Git.hm11_2
 {
     class Realtor : IObserver
     {
@@ -26,6 +28,7 @@
         {
             monitor.RemoveObserver(this);
             monitor = null;
+            Console.WriteLine($"WARNING: REALTOR IS UNSUBSCRIBED!\n");
         }
     }
 }

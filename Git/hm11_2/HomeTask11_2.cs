@@ -15,7 +15,7 @@
             monitor.GetAveragePrice();
             monitor.GetAveragePrice();
             monitor.GetAveragePrice();
-
+            
             listener_B.Unsubscribe();
 
             monitor.GetAveragePrice();
