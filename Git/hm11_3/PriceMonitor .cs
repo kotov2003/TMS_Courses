@@ -13,6 +13,7 @@ namespace Git.hm11_3
         {
             this.subscription += subscription;
         }
+
         public PriceMonitor()
         {
         }
