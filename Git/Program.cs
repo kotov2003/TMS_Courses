@@ -69,7 +69,8 @@ public class Program
         //HomeTask10.Task_CarEngines();
         //HomeTask10.Task_Point();
 
-        //HomeTaskAdditinal.Task_1();
-        //HomeTaskAdditinal.Task_2();
+        HomeTaskAdditinal.Task_1();
+        HomeTaskAdditinal.Task_2();
+        HomeTaskAdditinal.Task_3();
     }
 }
