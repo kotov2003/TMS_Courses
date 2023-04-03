@@ -8,6 +8,7 @@ using Git.hm6;
 using Git.hm7;
 using Git.hm8;
 using Git.hm9;
+using Git.hm12;
 
 public class Program
 {
@@ -64,8 +65,16 @@ public class Program
         //HomeTask9.Task_ProductsStore_1_2();
         //HomeTask9.Task_ProductDictionary();
 
-        HomeTask10.Task_Generic_1();
-        HomeTask10.Task_CarEngines();
-        HomeTask10.Task_Point();
+        //HomeTask10.Task_Generic_1();
+        //HomeTask10.Task_CarEngines();
+        //HomeTask10.Task_Point();
+
+
+
+
+
+
+
+        HomeTask12.Task_OneLetterWord();
     }
 }
