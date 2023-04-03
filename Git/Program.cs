@@ -82,6 +82,6 @@ public class Program
         HomeTask12.Task_ContainsNumber();
         HomeTask12.Task_LengthOfTheShortestWord();
         HomeTask12.Task_Dictionary();
-
+        HomeTask12.Task_GetNames();
     }
 }

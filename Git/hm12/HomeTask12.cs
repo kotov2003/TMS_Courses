@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Git.hm12
+﻿namespace Git.hm12
 {
     public class HomeTask12
     {
@@ -48,25 +41,28 @@ namespace Git.hm12
         public static void Task_UniqueValue()
         {
             var listUniq = new List<string>() { "word", "we", "word_1", "eett", "word", "we", "word" };
+            PrintSequence(listUniq);
 
-            Console.WriteLine($"Number of unique values is {listUniq.Distinct().Count()}");
+            Console.WriteLine($"\nNumber of unique values is {listUniq.Distinct().Count()}");
         }
 
         public static void Task_ContainsNumber()
         {
             var list = new List<string>() { "word", "ee", "word_1", "ee3tt", "tee", "wer33t", "3we", "peertt", "3" };
+            PrintSequence(list);
 
             var resultList = list.Skip(4).Where(x => x.Contains('3')).ToList();
 
-            Console.WriteLine($"Word Sequence containing '3' since fifth element");
+            Console.WriteLine($"\nWord Sequence containing '3' since fifth element");
             PrintSequence(resultList);
         }
 
         public static void Task_LengthOfTheShortestWord()
         {
             var list = new List<string>() { "word", "ee3", "word_1", "ee3tt", "tee", "wert", "e", "peertt", "5qrt" };
+            PrintSequence(list);
 
-            Console.WriteLine($"The shortest wird has length {list.Select(x => x.Length).Min()}");
+            Console.WriteLine($"\nThe shortest wird has length {list.Select(x => x.Length).Min()}");
         }
 
         public static void Task_Dictionary()
@@ -81,25 +77,36 @@ namespace Git.hm12
             PrintDictionary(dictionary.ToList().ToDictionary(x => x.Value, x => x.Key));
         }
 
+        public static void Task_GetNames()
+        {
+            var user1 = new User("Zak", "Ivanovich", "Alexov");
+            var user2 = new User("Paul", "", "McCartney");
+            var user3 = new User("Smith", "", "Smithov");
+            var user4 = new User("Winni", "Sergeyevich", "Borisov");
+            List<User> users = new List<User>() { user1, user2, user3, user4 };
 
+            var orderedList = users.OrderByDescending(p => p.LastName);
+            foreach (var item in orderedList)
+            {
+                item.ShowNames();
+            }
+        }
 
-
-
-        public static string WordSerachFunctionByСriterion(List<string> list, int min, int max)
+        private static string WordSerachFunctionByСriterion(List<string> list, int min, int max)
         {
             return list.FindLast(x => x.Length >= min && x.Length <= max);
         }
 
-        public static void PrintSequence(List<string> list)
+        private static void PrintSequence(List<string> list)
         {
-            Console.WriteLine("String sequence:");
+            Console.WriteLine("\nString sequence:");
             foreach (var item in list)
             {
                 Console.Write(item + " ");
             }
         }
 
-        public static void PrintDictionary(Dictionary<string, string> list)
+        private static void PrintDictionary(Dictionary<string, string> list)
         {
             Console.WriteLine("\nDictionary: ");
             foreach (var item in list)
@@ -108,11 +115,11 @@ namespace Git.hm12
             }
         }
 
-        public static void ShowResult(string result, int min, int max)
+        private static void ShowResult(string result, int min, int max)
         {
             if (result != null)
             {
-                Console.WriteLine($"\nLast Word With Length less than {max} and more than {min} Is: '{result}'\n");
+                Console.WriteLine($"\nLast Word With Length less than {max} and more than {min} Is: '{result}'");
             }
             else
             {
