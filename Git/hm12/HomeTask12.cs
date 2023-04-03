@@ -50,6 +50,17 @@ namespace Git.hm12
             ShowResult(WordSerachFunctionByСriterion(listFailedSearch, min, max), min, max);
         }
 
+        public static void Task_UniqueValue()
+        {
+            var listUniq = new List<string>() { "word", "we", "word_1", "eett", "word","we", "word" };
+
+            Console.WriteLine($"Number of unique values is {listUniq.Distinct().Count()}");
+        }
+
+
+
+
+
         public static string WordSerachFunctionByСriterion(List<string> list, int min, int max)
         {
             return list.FindLast(x => x.Length >= min && x.Length <= max);
