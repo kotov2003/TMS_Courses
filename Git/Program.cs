@@ -1,5 +1,8 @@
 ﻿using Git.hm1;
 using Git.hm10;
+using Git.hm11;
+using Git.hm11_2;
+using Git.hm11_3;
 using Git.hm2;
 using Git.hm3;
 using Git.hm4;
@@ -8,6 +11,7 @@ using Git.hm6;
 using Git.hm7;
 using Git.hm8;
 using Git.hm9;
+using Git.hmAd;
 
 public class Program
 {
@@ -64,8 +68,15 @@ public class Program
         //HomeTask9.Task_ProductsStore_1_2();
         //HomeTask9.Task_ProductDictionary();
 
-        HomeTask10.Task_Generic_1();
-        HomeTask10.Task_CarEngines();
-        HomeTask10.Task_Point();
+        //HomeTask10.Task_Generic_1();
+        //HomeTask10.Task_CarEngines();
+        //HomeTask10.Task_Point();
+
+        HomeTask11.Task_PriceMonitoring();
+        HomeTask11_2.Task_PriceMonitoring_Observer();
+        HomeTask11_3.Task_PriceMonitoring_Events();
+        HomeTaskAdditinal.Task_1();
+        HomeTaskAdditinal.Task_2();
+        HomeTaskAdditinal.Task_3();
     }
 }
