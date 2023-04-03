@@ -75,10 +75,13 @@ public class Program
 
 
 
-        //HomeTask12.Task_OneLetterWord();
-        //HomeTask12.Task_LastWordWithSubstring();
-        //HomeTask12.Task_LastWordWithConditions();
+        HomeTask12.Task_OneLetterWord();
+        HomeTask12.Task_LastWordWithSubstring();
+        HomeTask12.Task_LastWordWithConditions();
         HomeTask12.Task_UniqueValue();
+        HomeTask12.Task_ContainsNumber();
+        HomeTask12.Task_LengthOfTheShortestWord();
+        HomeTask12.Task_Dictionary();
 
     }
 }
