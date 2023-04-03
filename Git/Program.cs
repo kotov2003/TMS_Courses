@@ -77,5 +77,6 @@ public class Program
 
         HomeTask12.Task_OneLetterWord();
         HomeTask12.Task_LastWordWithSubstring();
+        HomeTask12.Task_LastWordWithConditions();
     }
 }

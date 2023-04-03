@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,23 +11,17 @@ namespace Git.hm12
     {
         public static void Task_OneLetterWord()
         {
-            var list_1 = new List<string>() { "word", "word_1", "e", "t", "wert", "1" };
-            var list_2 = "word word_1 e t wert 1";
+            var list = new List<string>() { "word", "word_1", "e", "t", "wert", "1" };
+            var words = "word word_1 e t wert 1";
 
-            Console.WriteLine("String sequence:");
+            PrintSequence(list);
 
-            foreach (var item in list_1)
-            {
-                Console.Write(item + " ");
-            }
+            var listString = words.Split(' ');
+            var resultList1 = list.Where(x => x.Length == 1).First();
+            var resultList2 = listString.Where(x => x.Length == 1).First();
 
-            var test = list_2.Split(' ');
-
-            var result = list_1.Where(x => x.Count() == 1).First();
-            var result2 = test.Where(x => x.Count() == 1).First();
-
-            Console.WriteLine($"\nFirst One Letter Word Is: '{result}'");
-            Console.WriteLine($"First One Letter Word Is: '{result2}'");
+            Console.WriteLine($"\nFirst One Letter Word Is: '{resultList1}'");
+            Console.WriteLine($"First One Letter Word Is: '{resultList2}'\n");
         }
 
         public static void Task_LastWordWithSubstring()
@@ -34,15 +29,51 @@ namespace Git.hm12
             var list = new List<string>() { "word", "ee", "word_1", "eett", "tee", "wert", "peer" };
             string subString = "ee";
 
+            PrintSequence(list);
+
+            var result = list.FindLast(x => x.Contains(subString));
+
+            Console.WriteLine($"\nLast Word That Contains '{subString}' Is: '{result}'\n");
+        }
+
+        public static void Task_LastWordWithConditions()
+        {
+            var listPassedSearch = new List<string>() { "word", "ee", "word_1", "eett", "tee", "wert", "we", "peertt" };
+            var listFailedSearch = new List<string>() { "worddd", "w" };
+            int min = 3;
+            int max = 5;
+
+            PrintSequence(listPassedSearch);
+            PrintSequence(listFailedSearch);
+
+            ShowResult(WordSerachFunctionByСriterion(listPassedSearch, min, max), min, max);
+            ShowResult(WordSerachFunctionByСriterion(listFailedSearch, min, max), min, max);
+        }
+
+        public static string WordSerachFunctionByСriterion(List<string> list, int min, int max)
+        {
+            return list.FindLast(x => x.Length >= min && x.Length <= max);
+        }
+
+        public static void PrintSequence(List<string> list)
+        {
             Console.WriteLine("String sequence:");
             foreach (var item in list)
             {
                 Console.Write(item + " ");
             }
+        }
 
-            var result = list.FindLast(x => x.Contains(subString));
-
-            Console.WriteLine($"\nLast Word That Contains '{subString}' Is: '{result}'");
+        public static void ShowResult(string result, int min, int max)
+        {
+            if (result != null)
+            {
+                Console.WriteLine($"\nLast Word With Length less than {max} and more than {min} Is: '{result}'\n");
+            }
+            else
+            {
+                Console.WriteLine($"\nNo matching words found (less than {max} and more than {min})\n");
+            }
         }
     }
 }
