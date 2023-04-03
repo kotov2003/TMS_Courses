@@ -28,5 +28,21 @@ namespace Git.hm12
             Console.WriteLine($"\nFirst One Letter Word Is: '{result}'");
             Console.WriteLine($"First One Letter Word Is: '{result2}'");
         }
+
+        public static void Task_LastWordWithSubstring()
+        {
+            var list = new List<string>() { "word", "ee", "word_1", "eett", "tee", "wert", "peer" };
+            string subString = "ee";
+
+            Console.WriteLine("String sequence:");
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+
+            var result = list.FindLast(x => x.Contains(subString));
+
+            Console.WriteLine($"\nLast Word That Contains '{subString}' Is: '{result}'");
+        }
     }
 }
