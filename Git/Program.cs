@@ -12,6 +12,7 @@ using Git.hm7;
 using Git.hm8;
 using Git.hm9;
 using Git.hmAd;
+using Git.hm12;
 
 public class Program
 {
@@ -72,11 +73,20 @@ public class Program
         //HomeTask10.Task_CarEngines();
         //HomeTask10.Task_Point();
 
-        HomeTask11.Task_PriceMonitoring();
-        HomeTask11_2.Task_PriceMonitoring_Observer();
-        HomeTask11_3.Task_PriceMonitoring_Events();
-        HomeTaskAdditinal.Task_1();
-        HomeTaskAdditinal.Task_2();
-        HomeTaskAdditinal.Task_3();
+        //HomeTask11.Task_PriceMonitoring();
+        //HomeTask11_2.Task_PriceMonitoring_Observer();
+        //HomeTask11_3.Task_PriceMonitoring_Events();
+        //HomeTaskAdditinal.Task_1();
+        //HomeTaskAdditinal.Task_2();
+        //HomeTaskAdditinal.Task_3();
+
+        HomeTask12.Task_OneLetterWord();
+        HomeTask12.Task_LastWordWithSubstring();
+        HomeTask12.Task_LastWordWithConditions();
+        HomeTask12.Task_UniqueValue();
+        HomeTask12.Task_ContainsNumber();
+        HomeTask12.Task_LengthOfTheShortestWord();
+        HomeTask12.Task_Dictionary();
+        HomeTask12.Task_GetNames();
     }
 }
