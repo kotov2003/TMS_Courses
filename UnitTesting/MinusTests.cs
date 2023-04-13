@@ -41,10 +41,10 @@
         [Retry(2)]
         [Test]
         [Category("Minus"), Description("Random tests")]
-        public void MinusRandomTest([Values(1, 2, 3)] int operand_1, [Random(1, 100, 2)] int operand_2)
+        public void MinusRandomTest([Values(101, 201, 301)] int operand_1, [Random(1, 100, 2)] int operand_2)
         {
             var actualResult = calculator.Minus(operand_1, operand_2);
-            Assert.That(actualResult, Is.Not.EqualTo(0), $"Minus {operand_1} + {operand_2} = {actualResult}");
+            Assert.That(actualResult, Is.Not.EqualTo(0), $"Minus {operand_1} - {operand_2} = {actualResult}");
         }
 
         [TearDown]
