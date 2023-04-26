@@ -10,9 +10,7 @@ namespace SharelaneAutomation.Pages
 {
     public class SignUpPage : BasePage
     {
-        private static string zipCode = "";
         const string SignUpUrl_1 = "https://sharelane.com/cgi-bin/register.py";
-       // private string SignUpUrl_2 = $"https://sharelane.com/cgi-bin/register.py?page=1&zip_code={zipCode}";
 
         By signupTitleLocator = By.XPath($"//b[.=\"Sign Up\"]");
         By zipcodeInputLocator = By.XPath($"//input[@name=\"zip_code\"]");
@@ -30,11 +28,6 @@ namespace SharelaneAutomation.Pages
         By passwordGeneratedLocator = By.XPath($"//td[preceding-sibling::td=\"Password\"]");
         By toMainPageLinkLocator = By.XPath($"//a[@href=\"./main.py\"]");
 
-
-
-
-
-
         public SignUpPage(WebDriver driver) : base(driver)
         {
             Assert.IsTrue(CheckSignUpPagePresented());
@@ -48,14 +41,12 @@ namespace SharelaneAutomation.Pages
 
         public void SetZipCode(string zipCodeValue)
         {
-            zipCode = zipCodeValue;
             ChromeDriver.FindElement(zipcodeInputLocator).SendKeys(zipCodeValue);
         }
 
         public void ClickContinueButton()
         {
             ChromeDriver.FindElement(continueButtonLocator).Click();
-        //    Assert.AreEqual(SignUpUrl_2, ChromeDriver.Url);
         }
 
         public void SetFirstName(string firstNameValue)
@@ -108,8 +99,5 @@ namespace SharelaneAutomation.Pages
             ChromeDriver.FindElement(toMainPageLinkLocator).Click();
             return new MainPage(ChromeDriver);
         }
-
-
-
     }
 }

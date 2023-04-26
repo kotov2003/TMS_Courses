@@ -14,8 +14,6 @@ namespace SharelaneAutomation.Tests
         protected WebDriver ChromeDriver { get; set; }
         public StartPage StartPage { get; set; }
 
-
-
         [SetUp]
         public void Setup()
         {

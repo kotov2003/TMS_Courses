@@ -39,9 +39,6 @@ namespace SharelaneAutomation.Tests
             signUpPage.SetPassword2(password2Value);
             signUpPage.ClickRegisterButton();
 
-            var emailGeneratedValue = signUpPage.GetEmailGeneratedValue().Text;
-            var passwordGeneratedValue = signUpPage.GetPasswordlGeneratedValue().Text;
-
             Assert.Multiple(() =>
             {
                 Assert.AreEqual("Account is created!", signUpPage.GetAccountCreatedMessage().Text);
@@ -49,6 +46,9 @@ namespace SharelaneAutomation.Tests
                 Assert.IsTrue(signUpPage.GetEmailGeneratedValue().Text.Contains('@'));
                 Assert.AreEqual("1111", signUpPage.GetPasswordlGeneratedValue().Text);
             });
+
+            var emailGeneratedValue = signUpPage.GetEmailGeneratedValue().Text;
+            var passwordGeneratedValue = signUpPage.GetPasswordlGeneratedValue().Text;
 
             var mainPage = signUpPage.ClickToMainPageLink();
             Assert.AreEqual(mainPageUrl, ChromeDriver.Url);
