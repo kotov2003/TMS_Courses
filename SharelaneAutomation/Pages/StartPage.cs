@@ -4,10 +4,10 @@ namespace SharelaneAutomation.Pages
 {
     public class StartPage : HeaderPage
     {
-        By signUpLinkLocator = By.XPath($"//a[.=\"Sign up\"]");
+        By signUpLinkLocator = By.XPath($"//a[.='Sign up']");
         private By emaiilInputLocator = By.Name("email");
         private By passwordInputLocator = By.Name("password");
-        private By loginButtonLocator = By.XPath($"//input[@value=\"Login\"]");
+        private By loginButtonLocator = By.XPath($"//input[@value='Login']");
 
         public StartPage(WebDriver driver) : base(driver) { }
 

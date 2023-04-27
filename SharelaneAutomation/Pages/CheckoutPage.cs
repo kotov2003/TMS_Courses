@@ -5,13 +5,13 @@ namespace SharelaneAutomation.Pages
 {
     public class CheckoutPage : HeaderPage
     {
-        By checkoutTitleLocator = By.XPath($"//p[.=\"Checkout\"]");
-        By errorMustLoginMessageLocator = By.XPath($"//*[@class=\"error_message\"]");
-        By cardUpdatedMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
+        By checkoutTitleLocator = By.XPath($"//p[.='Checkout']");
+        By errorMustLoginMessageLocator = By.XPath($"//*[@class='error_message']");
+        By cardUpdatedMessageLocator = By.XPath($"//*[@class='confirmation_message']");
         By makePaymentButtonLocator = By.XPath("//input[@value='Make Payment']");
         By cardTypeComboboxLocator = By.XPath("//select[@name='card_type_id']");
         By cardNumberLocator = By.XPath("//input[@name='card_number']");
-        By thankYouMessageLocator = By.XPath($"//p[.=\"Thank you for your order!!!\"]");
+        By thankYouMessageLocator = By.XPath($"//p[.='Thank you for your order!!!']");
         By orderIdLocator = By.XPath("//p[contains(text(), 'Order id:')]");
 
         public CheckoutPage(WebDriver driver) : base(driver)

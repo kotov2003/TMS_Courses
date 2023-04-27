@@ -4,8 +4,8 @@ namespace SharelaneAutomation.Pages
 {
     public class SearchPage : HeaderPage
     {
-        By searchTitleLocator = By.XPath($"//p[.=\"Search\"]");
-        By addToCartButtonLocator = By.XPath($"//img[@src=\"../images/add_to_cart.gif\"]");
+        By searchTitleLocator = By.XPath($"//p[.='Search']");
+        By addToCartButtonLocator = By.XPath($"//img[@src='../images/add_to_cart.gif']");
 
         public SearchPage(WebDriver driver) : base(driver)
         {

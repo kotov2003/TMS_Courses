@@ -17,6 +17,9 @@ namespace SharelaneAutomation.Tests
             var discountPct = "7";
             var discountUsd = "0.7";
             var totalUsd = "10.70";
+            var cardType = "MasterCard";
+            var cardNumber = "2222222222223642";
+
 
             mainPage = StartPage.Login(Login, Password);
             mainPage.SetKeyword(title);
@@ -53,8 +56,8 @@ namespace SharelaneAutomation.Tests
                 Assert.IsTrue(checkoutPage.CheckTotalUSDPresented(totalUsd));
             });
 
-            checkoutPage.SelectCardType("MasterCard");
-            checkoutPage.SetCardNumber("2222222222223642");
+            checkoutPage.SelectCardType(cardType);
+            checkoutPage.SetCardNumber(cardNumber);
             checkoutPage.ClickMakePaymentButton();
             Assert.IsTrue(checkoutPage.CheckOrderIsSuccessful());
 

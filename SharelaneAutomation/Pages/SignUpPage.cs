@@ -6,21 +6,21 @@ namespace SharelaneAutomation.Pages
     {
         const string SignUpUrl_1 = "https://sharelane.com/cgi-bin/register.py";
 
-        By signupTitleLocator = By.XPath($"//p[.=\"Sign Up\"]");
-        By zipcodeInputLocator = By.XPath($"//input[@name=\"zip_code\"]");
-        By continueButtonLocator = By.XPath($"//input[@value=\"Continue\"]");
+        By signupTitleLocator = By.XPath($"//p[.='Sign Up']");
+        By zipcodeInputLocator = By.XPath($"//input[@name='zip_code']");
+        By continueButtonLocator = By.XPath($"//input[@value='Continue']");
 
-        By firstNameInputLocator = By.XPath($"//input[@name=\"first_name\"]");
-        By lastNameInputLocator = By.XPath($"//input[@name=\"last_name\"]");
-        By emailInputLocator = By.XPath($"//input[@name=\"email\"]");
-        By password1InputLocator = By.XPath($"//input[@name=\"password1\"]");
-        By password2InputLocator = By.XPath($"//input[@name=\"password2\"]");
-        By registerButtonLocator = By.XPath($"//input[@value=\"Register\"]");
+        By firstNameInputLocator = By.XPath($"//input[@name='first_name']");
+        By lastNameInputLocator = By.XPath($"//input[@name='last_name']");
+        By emailInputLocator = By.XPath($"//input[@name='email']");
+        By password1InputLocator = By.XPath($"//input[@name='password1']");
+        By password2InputLocator = By.XPath($"//input[@name='password2']");
+        By registerButtonLocator = By.XPath($"//input[@value='Register']");
 
-        By confirmationMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
-        By emailGeneratedLocator = By.XPath($"//td[preceding-sibling::td=\"Email\"]");
-        By passwordGeneratedLocator = By.XPath($"//td[preceding-sibling::td=\"Password\"]");
-        By toMainPageLinkLocator = By.XPath($"//a[@href=\"./main.py\"]");
+        By confirmationMessageLocator = By.XPath($"//*[@class='confirmation_message']");
+        By emailGeneratedLocator = By.XPath($"//td[preceding-sibling::td='Email']");
+        By passwordGeneratedLocator = By.XPath($"//td[preceding-sibling::td='Password']");
+        By toMainPageLinkLocator = By.XPath($"//a[@href='./main.py']");
 
         public SignUpPage(WebDriver driver) : base(driver)
         {

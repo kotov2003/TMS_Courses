@@ -4,8 +4,8 @@ namespace SharelaneAutomation.Pages
 {
     public class ShoppingCartPage : HeaderPage
     {
-        By shoppingCartTitleLocator = By.XPath($"//p[.=\"Shopping Cart\"]");
-        By confirmationMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
+        By shoppingCartTitleLocator = By.XPath($"//p[.='Shopping Cart']");
+        By confirmationMessageLocator = By.XPath($"//*[@class='confirmation_message']");
         By updateButtonLocator = By.XPath("//input[@value='Update']");
         By proceedToCheckoutLocator = By.XPath("//input[@value='Proceed to Checkout']");
 
