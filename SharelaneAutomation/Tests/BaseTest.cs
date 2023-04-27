@@ -8,7 +8,7 @@ namespace SharelaneAutomation.Tests
     {
         protected WebDriver ChromeDriver { get; set; }
         public StartPage StartPage { get; set; }
-        protected string Login { get; set; } = "ming_rao@904.68.sharelane.com";
+        protected string Login { get; set; } = "linda_jackson@448.54.sharelane.com";
         protected string Password { get; set; } = "1111";
 
 
