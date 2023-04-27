@@ -5,24 +5,15 @@ namespace SharelaneAutomation.Tests
     [TestFixture]
     public class SignUpTest : SharelaneBaseTest
     {
-
-        [SetUp]
-        public void Setup()
-        {
-            ChromeDriver.Navigate().GoToUrl("https://sharelane.com/cgi-bin/main.py");
-        }
-
         [Test]
         public void SignUpPositiveTest()
         {
-            string startPageUrl = "https://sharelane.com/cgi-bin/main.py";
             string zipCodeValue = "220082";
             string firstNameValue = "Alex";
             string lastNameValue = "Alexov";
             string emailValue = "alex@tut.by";
             string password1Value = "alexalex";
             string password2Value = "alexalex";
-
 
             var signUpPage = StartPage.SignUp();
             signUpPage.SetZipCode(zipCodeValue);
