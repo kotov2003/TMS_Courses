@@ -7,6 +7,7 @@ namespace SharelaneAutomation.Pages
         By searchTitleLocator = By.XPath($"//p[.='Search']");
         By addToCartButtonLocator = By.XPath($"//img[@src='../images/add_to_cart.gif']");
         By bookCover = By.XPath($"//img[@src='../images/product_8_large.jpg']");
+        By confirmationMessageLocator = By.XPath($"//*[@class='confirmation_message']");
 
         public SearchPage(WebDriver driver) : base(driver)
         {
@@ -43,8 +44,10 @@ namespace SharelaneAutomation.Pages
             return ChromeDriver.FindElement(bookCover).Displayed;
         }
 
-        //<img src="../images/product_8_large.jpg">
-
+        public IWebElement GetWarningMessage()
+        {
+            return ChromeDriver.FindElement(confirmationMessageLocator);
+        }
 
         public AddToCartPage ClickAddToCard()
         {
