@@ -6,7 +6,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace SharelaneAutomation.Tests
 {
     [TestFixture]
-    public class SearchTests : SharelaneBaseTest
+    public class E2ETests : SharelaneBaseTest
     {
         private MainPage mainPage;
 

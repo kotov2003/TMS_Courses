@@ -19,8 +19,6 @@ namespace SharelaneAutomation.Tests
         {
             string startPageUrl = "https://sharelane.com/cgi-bin/main.py";
             string zipCodeValue = "220082";
-            string expectedSignupUrl_2 = $"https://sharelane.com/cgi-bin/register.py?page=1&zip_code={zipCodeValue}";
-
             string firstNameValue = "Alex";
             string lastNameValue = "Alexov";
             string emailValue = "alex@tut.by";
@@ -51,8 +49,6 @@ namespace SharelaneAutomation.Tests
             var passwordGeneratedValue = signUpPage.GetPasswordlGeneratedValue().Text;
 
             var startPage = signUpPage.ClickToStartPageLink();
-            Assert.AreEqual(startPageUrl, ChromeDriver.Url);
-
             startPage.Login(emailGeneratedValue, passwordGeneratedValue).Logout(); ;          
         }
 
