@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SharelaneAutomation.Pages
 {
-    public class StartPage : BasePage
+    public class StartPage : HeaderPage
     {
         By signUpLinkLocator = By.XPath($"//a[.=\"Sign up\"]");
         private By emaiilInputLocator = By.Name("email");

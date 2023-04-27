@@ -11,12 +11,6 @@ namespace SharelaneAutomation.Pages
     {
         By logoutLinkLocator = By.XPath($"//a[@href=\"./log_out.py\"]");
 
-        By keywordInputLocator = By.XPath($"//input[@name=\"keyword\"]");
-
-        By searchButtonLocator = By.XPath($"//input[@value=\"Search\"]");
-
-        By searchTitleLocator = By.XPath($"//b[.=\"Search\"]");//??
-
         protected WebDriver ChromeDriver { get; set; }
 
         public BasePage(WebDriver driver)

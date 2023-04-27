@@ -2,7 +2,7 @@
 
 namespace SharelaneAutomation.Pages
 {
-    public class MainPage : BasePage
+    public class MainPage : HeaderPage
     {
         By logoutButtonLocator = By.XPath($"//a[@href=\"./log_out.py\"]");
 

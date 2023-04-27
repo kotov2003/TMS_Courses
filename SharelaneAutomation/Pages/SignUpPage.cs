@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace SharelaneAutomation.Pages
 {
-    public class SignUpPage : BasePage
+    public class SignUpPage : HeaderPage
     {
         const string SignUpUrl_1 = "https://sharelane.com/cgi-bin/register.py";
 
-        By signupTitleLocator = By.XPath($"//b[.=\"Sign Up\"]");
+        By signupTitleLocator = By.XPath($"//p[.=\"Sign Up\"]");
         By zipcodeInputLocator = By.XPath($"//input[@name=\"zip_code\"]");
         By continueButtonLocator = By.XPath($"//input[@value=\"Continue\"]");
 
@@ -94,10 +94,10 @@ namespace SharelaneAutomation.Pages
             return ChromeDriver.FindElement(passwordGeneratedLocator);
         }
 
-        public MainPage ClickToMainPageLink()
+        public StartPage ClickToStartPageLink()
         {
             ChromeDriver.FindElement(toMainPageLinkLocator).Click();
-            return new MainPage(ChromeDriver);
+            return new StartPage(ChromeDriver);
         }
     }
 }

@@ -5,7 +5,7 @@ using SharelaneAutomation.Pages;
 namespace SharelaneAutomation.Tests
 {
     [TestFixture]
-    public class SignUpTest : BaseTest
+    public class SignUpTest : SharelaneBaseTest
     {
 
         [SetUp]
@@ -17,7 +17,7 @@ namespace SharelaneAutomation.Tests
         [Test]
         public void SignUpPositiveTest()
         {
-            string mainPageUrl = "https://sharelane.com/cgi-bin/main.py";
+            string startPageUrl = "https://sharelane.com/cgi-bin/main.py";
             string zipCodeValue = "220082";
             string expectedSignupUrl_2 = $"https://sharelane.com/cgi-bin/register.py?page=1&zip_code={zipCodeValue}";
 
@@ -50,10 +50,10 @@ namespace SharelaneAutomation.Tests
             var emailGeneratedValue = signUpPage.GetEmailGeneratedValue().Text;
             var passwordGeneratedValue = signUpPage.GetPasswordlGeneratedValue().Text;
 
-            var mainPage = signUpPage.ClickToMainPageLink();
-            Assert.AreEqual(mainPageUrl, ChromeDriver.Url);
+            var startPage = signUpPage.ClickToStartPageLink();
+            Assert.AreEqual(startPageUrl, ChromeDriver.Url);
 
-            StartPage.Login(emailGeneratedValue, passwordGeneratedValue).Logout(); ;          
+            startPage.Login(emailGeneratedValue, passwordGeneratedValue).Logout(); ;          
         }
 
     }

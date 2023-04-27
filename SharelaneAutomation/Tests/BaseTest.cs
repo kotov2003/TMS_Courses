@@ -13,6 +13,9 @@ namespace SharelaneAutomation.Tests
     {
         protected WebDriver ChromeDriver { get; set; }
         public StartPage StartPage { get; set; }
+        protected string Login { get; set; } = "sally_lee@266.64.sharelane.com";
+        protected string Password { get; set; } = "1111";
+
 
         [SetUp]
         public void Setup()
@@ -24,7 +27,7 @@ namespace SharelaneAutomation.Tests
         }
 
         [TearDown]
-        public void TearDwn()
+        public void TearDown()
         {
             ChromeDriver.Quit();
         }
