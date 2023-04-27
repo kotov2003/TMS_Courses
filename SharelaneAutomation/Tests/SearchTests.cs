@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using SharelaneAutomation.Pages;
+﻿using SharelaneAutomation.Pages;
 
 namespace SharelaneAutomation.Tests
 {
@@ -66,23 +65,12 @@ namespace SharelaneAutomation.Tests
                 Assert.IsTrue(searchPage.CheckBookCoverPresented());
 
             });
-
         }
-
 
         [Test]
         public void SearchNonExistentBookTest()
         {
-            var author = "W.Somerset Maugham";
             var title = "GULAG";
-            var quantity = "1";
-            var price = "10.00";
-            var discountPct = "7";
-            var discountUsd = "0.7";
-            var totalUsd = "10.70";
-            var cardType = "MasterCard";
-            var cardNumber = "2222222222223642";
-
 
             mainPage = StartPage.Login(Login, Password);
             mainPage.SetKeyword(title);
