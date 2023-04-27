@@ -1,10 +1,4 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Pages
 {
@@ -43,6 +37,14 @@ namespace SharelaneAutomation.Pages
             SetPassword(password);
             ClickLoginButton();
             return new MainPage(ChromeDriver);
+        }
+
+        public LoginPage LoginInvalid(string username = "", string password = "")
+        {
+            SetEmail(username);
+            SetPassword(password);
+            ClickLoginButton();
+            return new LoginPage(ChromeDriver);
         }
 
         public SignUpPage SignUp()

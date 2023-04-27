@@ -1,11 +1,4 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework.Internal;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
 namespace SharelaneAutomation.Pages
@@ -15,18 +8,11 @@ namespace SharelaneAutomation.Pages
         By checkoutTitleLocator = By.XPath($"//p[.=\"Checkout\"]");
         By errorMustLoginMessageLocator = By.XPath($"//*[@class=\"error_message\"]");
         By cardUpdatedMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
-
         By makePaymentButtonLocator = By.XPath("//input[@value='Make Payment']");
         By cardTypeComboboxLocator = By.XPath("//select[@name='card_type_id']");
         By cardNumberLocator = By.XPath("//input[@name='card_number']");
         By thankYouMessageLocator = By.XPath($"//p[.=\"Thank you for your order!!!\"]");
         By orderIdLocator = By.XPath("//p[contains(text(), 'Order id:')]");
-
-
-
-
-
-
 
         public CheckoutPage(WebDriver driver) : base(driver)
         {

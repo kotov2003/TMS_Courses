@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using SharelaneAutomation.Pages;
+﻿using SharelaneAutomation.Pages;
 
 namespace SharelaneAutomation.Tests
 {
@@ -10,7 +8,15 @@ namespace SharelaneAutomation.Tests
         [Test]
         public void LoginPositiveTest()
         {
-            StartPage.Login(Login, Password).Logout();
+            var mainPage = StartPage.Login(Login, Password);
+            mainPage.Logout();
+        }
+
+        [Test]
+        public void LoginWithWrongPasswordTest()
+        {
+            var loginPage = StartPage.LoginInvalid(Login, "wrongPassword");
+            Assert.AreEqual("Oops, error. Email and/or password don't match our records", loginPage.GetErrorMessage().Text);
         }
     }
 }

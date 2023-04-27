@@ -7,7 +7,7 @@ namespace SharelaneAutomation.Pages
         By signupTitleLocator = By.XPath($"//p[.='Add to Shopping Cart']");
         By bookWasAddedMessageLocator = By.XPath($"//*[@class='confirmation_message']");
         By shoppingCartLinkLocator = By.XPath($"//a[@href='./shopping_cart.py']");
-        By errorMustLoginMessageLocator = By.XPath($"//*[@class='error_message']");
+        By errorMessageLocator = By.XPath($"//*[@class='error_message']");
 
         public AddToCartPage(WebDriver driver) : base(driver)
         {
@@ -26,7 +26,7 @@ namespace SharelaneAutomation.Pages
 
         public IWebElement GetErrorMustLoginMessage()
         {
-            return ChromeDriver.FindElement(errorMustLoginMessageLocator);
+            return ChromeDriver.FindElement(errorMessageLocator);
         }
 
 

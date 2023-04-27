@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using SharelaneAutomation.Pages;
+﻿using SharelaneAutomation.Pages;
 
 namespace SharelaneAutomation.Tests
 {
@@ -51,6 +49,5 @@ namespace SharelaneAutomation.Tests
             var startPage = signUpPage.ClickToStartPageLink();
             startPage.Login(emailGeneratedValue, passwordGeneratedValue).Logout(); ;          
         }
-
     }
 }

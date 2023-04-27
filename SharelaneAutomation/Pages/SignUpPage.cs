@@ -1,10 +1,4 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Pages
 {
@@ -23,7 +17,7 @@ namespace SharelaneAutomation.Pages
         By password2InputLocator = By.XPath($"//input[@name=\"password2\"]");
         By registerButtonLocator = By.XPath($"//input[@value=\"Register\"]");
 
-        By accountIsCreatedMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
+        By confirmationMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
         By emailGeneratedLocator = By.XPath($"//td[preceding-sibling::td=\"Email\"]");
         By passwordGeneratedLocator = By.XPath($"//td[preceding-sibling::td=\"Password\"]");
         By toMainPageLinkLocator = By.XPath($"//a[@href=\"./main.py\"]");
@@ -81,7 +75,7 @@ namespace SharelaneAutomation.Pages
 
         public IWebElement GetAccountCreatedMessage()
         {
-            return ChromeDriver.FindElement(accountIsCreatedMessageLocator);
+            return ChromeDriver.FindElement(confirmationMessageLocator);
         }
 
         public IWebElement GetEmailGeneratedValue()

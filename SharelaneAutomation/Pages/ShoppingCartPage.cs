@@ -1,23 +1,13 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Pages
 {
     public class ShoppingCartPage : HeaderPage
     {
         By shoppingCartTitleLocator = By.XPath($"//p[.=\"Shopping Cart\"]");
-        By cardUpdatedMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
-
+        By confirmationMessageLocator = By.XPath($"//*[@class=\"confirmation_message\"]");
         By updateButtonLocator = By.XPath("//input[@value='Update']");
         By proceedToCheckoutLocator = By.XPath("//input[@value='Proceed to Checkout']");
-
-
-
 
         public ShoppingCartPage(WebDriver driver) : base(driver)
         {
@@ -31,7 +21,7 @@ namespace SharelaneAutomation.Pages
 
         public IWebElement GetCardUpdatedMessage()
         {
-            return ChromeDriver.FindElement(cardUpdatedMessageLocator);
+            return ChromeDriver.FindElement(confirmationMessageLocator);
         }
 
         public bool CheckAuthorPresented(string author)
@@ -73,17 +63,10 @@ namespace SharelaneAutomation.Pages
         {
             ChromeDriver.FindElement(updateButtonLocator).Click();
         }
-
         public CheckoutPage ClickpProceedToCheckouButton()
         {
             ChromeDriver.FindElement(proceedToCheckoutLocator).Click();
             return new CheckoutPage(ChromeDriver);
         }
-
-
-        //<a href="./main.py">
-        //        < img src = "../images/logo.jpg" border = "0" ></ a >
-
-
     }
 }

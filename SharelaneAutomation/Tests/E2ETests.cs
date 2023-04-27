@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using SharelaneAutomation.Pages;
-using static System.Net.Mime.MediaTypeNames;
+﻿using SharelaneAutomation.Pages;
 
 namespace SharelaneAutomation.Tests
 {
@@ -32,7 +29,6 @@ namespace SharelaneAutomation.Tests
             Assert.IsTrue(addToCartPage.GetbookWasAddedMessage().Displayed);
 
             var shoppingCartPage = addToCartPage.ClickShoppingCartLink();
-            //Assert.AreEqual("Oops, error. You must log in", shoppingCartPage.GetErrorMustLoginMessage().Text);
 
             Assert.Multiple(() =>
             {
@@ -58,7 +54,7 @@ namespace SharelaneAutomation.Tests
             });
 
             checkoutPage.SelectCardType("MasterCard");
-            checkoutPage.SetCardNumber("2222222222226241");
+            checkoutPage.SetCardNumber("2222222222223642");
             checkoutPage.ClickMakePaymentButton();
             Assert.IsTrue(checkoutPage.CheckOrderIsSuccessful());
 

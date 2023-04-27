@@ -1,10 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SharelaneAutomation.Pages
 {
@@ -25,6 +19,5 @@ namespace SharelaneAutomation.Pages
             ChromeDriver.FindElement(searchButtonLocator).Click();
             return new SearchPage(ChromeDriver);
         }
-
     }
 }
