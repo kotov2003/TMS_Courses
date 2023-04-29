@@ -4,8 +4,8 @@ namespace SharelaneAutomation.Pages
 {
     public class HeaderPage : BasePage
     {
-        By keywordInputLocator = By.XPath($"//input[@name='keyword']");
-        By searchButtonLocator = By.XPath($"//input[@value='Search']");
+        By keywordInputLocator = By.XPath("//input[@name='keyword']");
+        By searchButtonLocator = By.XPath("//input[@value='Search']");
 
         public HeaderPage(WebDriver driver) : base(driver) { }
 

@@ -4,7 +4,7 @@ namespace SharelaneAutomation.Pages
 {
     public class MainPage : HeaderPage
     {
-        private By logoutButtonLocator = By.XPath($"//a[@href='./log_out.py']");
+        private By logoutButtonLocator = By.XPath("//a[@href='./log_out.py']");
 
         public MainPage(WebDriver driver) : base(driver)
         {

@@ -18,7 +18,7 @@ namespace SharelaneAutomation.Tests
             var discountUsd = "0.7";
             var totalUsd = "10.70";
             var cardType = "MasterCard";
-            var cardNumber = "2222222222223642";
+            var cardNumber = "2222222222226645";
 
 
             mainPage = StartPage.Login(Login, Password);

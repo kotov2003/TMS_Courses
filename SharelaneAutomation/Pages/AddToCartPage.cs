@@ -4,10 +4,10 @@ namespace SharelaneAutomation.Pages
 {
     public class AddToCartPage : HeaderPage
     {
-        By signupTitleLocator = By.XPath($"//p[.='Add to Shopping Cart']");
-        By bookWasAddedMessageLocator = By.XPath($"//*[@class='confirmation_message']");
-        By shoppingCartLinkLocator = By.XPath($"//a[@href='./shopping_cart.py']");
-        By errorMessageLocator = By.XPath($"//*[@class='error_message']");
+        By signupTitleLocator = By.XPath("//p[.='Add to Shopping Cart']");
+        By bookWasAddedMessageLocator = By.XPath("//*[@class='confirmation_message']");
+        By shoppingCartLinkLocator = By.XPath("//a[@href='./shopping_cart.py']");
+        By errorMessageLocator = By.XPath("//*[@class='error_message']");
 
         public AddToCartPage(WebDriver driver) : base(driver)
         {

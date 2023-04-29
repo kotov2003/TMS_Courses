@@ -4,7 +4,7 @@ namespace SharelaneAutomation.Pages
 {
     public class LoginPage : HeaderPage
     {
-        By errorMessageLocator = By.XPath($"//*[@class='error_message']");
+        By errorMessageLocator = By.XPath("//*[@class='error_message']");
 
         public LoginPage(WebDriver driver) : base(driver) { }
 
