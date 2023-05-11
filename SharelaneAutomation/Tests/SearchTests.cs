@@ -21,7 +21,7 @@ namespace SharelaneAutomation.Tests
             var cardNumber = "2222222222223642";
 
 
-            mainPage = StartPage.Login(Login, Password);
+            mainPage = StartPage.Login(StandartUser);
             mainPage.SetKeyword(title);
             var searchPage = mainPage.ClickSearchButton();
 
@@ -51,7 +51,7 @@ namespace SharelaneAutomation.Tests
             var cardNumber = "2222222222223642";
 
 
-            mainPage = StartPage.Login(Login, Password);
+            mainPage = StartPage.Login(StandartUser);
             mainPage.SetKeyword(title.Substring(4,4));
             var searchPage = mainPage.ClickSearchButton();
 
@@ -72,7 +72,7 @@ namespace SharelaneAutomation.Tests
         {
             var title = "GULAG";
 
-            mainPage = StartPage.Login(Login, Password);
+            mainPage = StartPage.Login(StandartUser);
             mainPage.SetKeyword(title);
             var searchPage = mainPage.ClickSearchButton();
 

@@ -1,4 +1,5 @@
-﻿using SharelaneAutomation.Pages;
+﻿using Core.Utilities;
+using SharelaneAutomation.Pages;
 
 namespace SharelaneAutomation.Tests
 {
@@ -36,9 +37,14 @@ namespace SharelaneAutomation.Tests
 
             var emailGeneratedValue = signUpPage.GetEmailGeneratedValue().Text;
             var passwordGeneratedValue = signUpPage.GetPasswordlGeneratedValue().Text;
+            var generatedUser = new User
+            {
+                Name = emailGeneratedValue,
+                Password = passwordGeneratedValue
+            };
 
             var startPage = signUpPage.ClickToStartPageLink();
-            startPage.Login(emailGeneratedValue, passwordGeneratedValue).Logout(); ;          
+            startPage.Login(generatedUser).Logout(); ;          
         }
     }
 }

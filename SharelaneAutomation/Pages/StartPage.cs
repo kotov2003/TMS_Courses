@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Core.Utilities;
+using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Pages
 {
@@ -31,20 +32,23 @@ namespace SharelaneAutomation.Pages
             ChromeDriver.FindElement(loginButtonLocator).Click();
         }
 
-        public MainPage Login(string username = "", string password = "")
+        public MainPage Login(User user)
         {
-            SetEmail(username);
-            SetPassword(password);
-            ClickLoginButton();
+            TryToLogin(user);
             return new MainPage(ChromeDriver);
         }
 
-        public LoginPage LoginInvalid(string username = "", string password = "")
+        public LoginPage LoginInvalid(User user)
         {
-            SetEmail(username);
-            SetPassword(password);
-            ClickLoginButton();
+            TryToLogin(user);
             return new LoginPage(ChromeDriver);
+        }
+
+        private void TryToLogin(User user)
+        {
+            SetEmail(user.Name);
+            SetPassword(user.Password);
+            ClickLoginButton();
         }
 
         public SignUpPage SignUp()

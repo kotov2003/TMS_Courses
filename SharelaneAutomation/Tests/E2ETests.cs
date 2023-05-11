@@ -1,4 +1,5 @@
-﻿using SharelaneAutomation.Pages;
+﻿using Core.Utilities;
+using SharelaneAutomation.Pages;
 
 namespace SharelaneAutomation.Tests
 {
@@ -21,7 +22,7 @@ namespace SharelaneAutomation.Tests
             var cardNumber = "2222222222226645";
 
 
-            mainPage = StartPage.Login(Login, Password);
+            mainPage = StartPage.Login(StandartUser);
             mainPage.SetKeyword(title);
             var searchPage = mainPage.ClickSearchButton();
 

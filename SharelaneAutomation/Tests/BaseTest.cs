@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using SharelaneAutomation.Pages;
+using Core.Utilities;
+using Core.Configuration;
 
 namespace SharelaneAutomation.Tests
 {
@@ -8,14 +10,25 @@ namespace SharelaneAutomation.Tests
     {
         protected WebDriver ChromeDriver { get; set; }
         public StartPage StartPage { get; set; }
-        protected string Login { get; set; } = "eing_rao@639.03.sharelane.com";
-        protected string Password { get; set; } = "1111";
-
+        public User StandartUser { get; set; } = UserBuilder.GetStandartUser;
 
         [SetUp]
         public void Setup()
         {
-            ChromeDriver = new ChromeDriver();
+            string browser = TestContext.Parameters.Get("Browser");
+            bool headless = Configuration.Browser.Headless;
+
+            switch (browser)
+            {
+                case "headless":
+                    ChromeOptions options= new ChromeOptions();
+                    options.AddArguments("--headless");
+                    ChromeDriver = new ChromeDriver(options);
+                    break;
+                default:
+                    ChromeDriver = new ChromeDriver();
+                    break;
+            }
             ChromeDriver.Manage().Window.Maximize();
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             StartPage = new StartPage(ChromeDriver);
