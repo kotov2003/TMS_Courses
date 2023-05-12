@@ -6,7 +6,7 @@ namespace SharelaneAutomation.Pages
     {
         private By logoutButtonLocator = By.XPath("//a[@href='./log_out.py']");
 
-        public MainPage(WebDriver driver) : base(driver)
+        public MainPage() : base()
         {
             Assert.IsTrue(CheckMainPagePresented());
         }

@@ -7,7 +7,7 @@ namespace SharelaneAutomation.Pages
         By keywordInputLocator = By.XPath("//input[@name='keyword']");
         By searchButtonLocator = By.XPath("//input[@value='Search']");
 
-        public HeaderPage(WebDriver driver) : base(driver) { }
+        public HeaderPage() : base() { }
 
         public void SetKeyword(string keyword)
         {
@@ -17,7 +17,7 @@ namespace SharelaneAutomation.Pages
         public SearchPage ClickSearchButton()
         {
             ChromeDriver.FindElement(searchButtonLocator).Click();
-            return new SearchPage(ChromeDriver);
+            return new SearchPage();
         }
     }
 }

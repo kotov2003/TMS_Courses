@@ -16,7 +16,7 @@
 		<PackageReference Include="NUnit.Analyzers" Version="3.5.0" />
 		<PackageReference Include="coverlet.collector" Version="3.1.2" />
 		<PackageReference Include="Selenium.Support" Version="4.9.0" />
-		<PackageReference Include="Selenium.WebDriver" Version="4.9.0" />
+		<PackageReference Include="Selenium.WebDriver" Version="4.9.1" />
 		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="112.0.5615.4900" />
 	</ItemGroup>
 
@@ -26,6 +26,31 @@
 		<None Include="appsettings.$(Configuration).json">
 			<Link>appsettings.custom.json</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+
+		<None Update="FireFoxBrowser.runsettings">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+
+		<None Update="FireFoxBrowse.runsettings">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="DataFile.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+
+		<None Update="appsettings.Release.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="ChromeBrowser.runsettings">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="HeadlessBrowser.runsettings">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 
 	</ItemGroup>

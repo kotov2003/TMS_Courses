@@ -11,7 +11,7 @@ namespace SharelaneAutomation.Pages
         By proceedToCheckoutLocator = By.XPath("//input[@value='Proceed to Checkout']");
         By quantityCellLocator = By.XPath("//input[@name='q']");
 
-        public ShoppingCartPage(WebDriver driver) : base(driver)
+        public ShoppingCartPage() : base()
         {
             Assert.IsTrue(CheckShoppingCartPagePresented());
         }
@@ -79,7 +79,7 @@ namespace SharelaneAutomation.Pages
         public CheckoutPage ClickpProceedToCheckouButton()
         {
             ChromeDriver.FindElement(proceedToCheckoutLocator).Click();
-            return new CheckoutPage(ChromeDriver);
+            return new CheckoutPage();
         }
     }
 }

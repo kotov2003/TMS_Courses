@@ -11,7 +11,7 @@ namespace SharelaneAutomation.Pages
         string bookDataLocatorTemplate = "//p[.='{0}']";
         string priceLocatorTemplate = "//p[.='Price: ${0}']";
 
-        public SearchPage(WebDriver driver) : base(driver)
+        public SearchPage() : base()
         {
             Assert.IsTrue(CheckSearchPagePresented());
         }
@@ -66,7 +66,7 @@ namespace SharelaneAutomation.Pages
         public AddToCartPage ClickAddToCard()
         {
             ChromeDriver.FindElement(addToCartButtonLocator).Click();
-            return new AddToCartPage(ChromeDriver);
+            return new AddToCartPage();
         }
     }
 }

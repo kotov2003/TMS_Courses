@@ -15,7 +15,7 @@ namespace SharelaneAutomation.Pages
         By orderIdLocator = By.XPath("//p[contains(text(), 'Order id:')]");
         By quantityCellLocator = By.XPath("//input[@name='q']");
 
-        public CheckoutPage(WebDriver driver) : base(driver)
+        public CheckoutPage() : base()
         {
             Assert.IsTrue(CheckCheckoutPagePresented());
         }

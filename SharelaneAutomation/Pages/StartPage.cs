@@ -10,7 +10,7 @@ namespace SharelaneAutomation.Pages
         private By passwordInputLocator = By.Name("password");
         private By loginButtonLocator = By.XPath("//input[@value='Login']");
 
-        public StartPage(WebDriver driver) : base(driver) { }
+        public StartPage() : base() { }
 
         public bool CheckStartPagePresented()
         {
@@ -35,13 +35,13 @@ namespace SharelaneAutomation.Pages
         public MainPage Login(User user)
         {
             TryToLogin(user);
-            return new MainPage(ChromeDriver);
+            return new MainPage();
         }
 
         public LoginPage LoginInvalid(User user)
         {
             TryToLogin(user);
-            return new LoginPage(ChromeDriver);
+            return new LoginPage();
         }
 
         private void TryToLogin(User user)
@@ -54,7 +54,7 @@ namespace SharelaneAutomation.Pages
         public SignUpPage SignUp()
         {
             ChromeDriver.FindElement(signUpLinkLocator).Click();
-            return new SignUpPage(ChromeDriver);
+            return new SignUpPage();
         }
     }
 }

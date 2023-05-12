@@ -8,7 +8,7 @@ namespace SharelaneAutomation.Pages
         By logoutTitleLocator = By.XPath("//p[.='Log out']");
         By logOutMessageLocator = By.XPath("//*[@class='confirmation_message']");
 
-        public LogOutPage(WebDriver driver) : base(driver)
+        public LogOutPage() : base()
         {
             Assert.IsTrue(CheckLogOutPagePresented());
             Assert.AreEqual(LogoutMessage, GetLogOutMessageValue());

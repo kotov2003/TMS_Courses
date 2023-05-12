@@ -9,7 +9,7 @@ namespace SharelaneAutomation.Pages
         By shoppingCartLinkLocator = By.XPath("//a[@href='./shopping_cart.py']");
         By errorMessageLocator = By.XPath("//*[@class='error_message']");
 
-        public AddToCartPage(WebDriver driver) : base(driver)
+        public AddToCartPage() : base()
         {
             Assert.IsTrue(CheckAddToCartPagePresented());
         }
@@ -33,7 +33,7 @@ namespace SharelaneAutomation.Pages
         public ShoppingCartPage ClickShoppingCartLink()
         {
             ChromeDriver.FindElement(shoppingCartLinkLocator).Click();
-            return new ShoppingCartPage(ChromeDriver);
+            return new ShoppingCartPage();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Core.Selenium;
+using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Pages
 {
@@ -7,17 +8,17 @@ namespace SharelaneAutomation.Pages
         By logoutLinkLocator = By.XPath("//a[@href='./log_out.py']");
         protected string cellLocatorTemplate = "//td[.='{0}']";
 
-        protected WebDriver ChromeDriver { get; set; }
+        protected IWebDriver ChromeDriver { get; set; }
 
-        public BasePage(WebDriver driver)
+        public BasePage()
         {
-            ChromeDriver = driver;
+            ChromeDriver = Browser.Instance.Driver;
         }
 
         public LogOutPage Logout()
         {
             ChromeDriver.FindElement(logoutLinkLocator).Click();
-            return new LogOutPage(ChromeDriver);
+            return new LogOutPage();
         }
     }
 }

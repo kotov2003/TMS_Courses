@@ -22,7 +22,7 @@ namespace SharelaneAutomation.Pages
         By passwordGeneratedLocator = By.XPath("//td[preceding-sibling::td='Password']");
         By toMainPageLinkLocator = By.XPath("//a[@href='./main.py']");
 
-        public SignUpPage(WebDriver driver) : base(driver)
+        public SignUpPage() : base()
         {
             Assert.IsTrue(CheckSignUpPagePresented());
             Assert.AreEqual(SignUpUrl_1, ChromeDriver.Url);
@@ -91,7 +91,7 @@ namespace SharelaneAutomation.Pages
         public StartPage ClickToStartPageLink()
         {
             ChromeDriver.FindElement(toMainPageLinkLocator).Click();
-            return new StartPage(ChromeDriver);
+            return new StartPage();
         }
     }
 }
